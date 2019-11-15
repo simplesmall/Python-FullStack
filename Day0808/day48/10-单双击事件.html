@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>按钮</button>
+<script src="jquery.js"></script>
+<script>
+    //单双击的时间间隔是  300ms
+    var timer = null;
+    $('button').click(function () {
+        clearTimeout(timer);
+        timer= setTimeout(function () {
+            console.log('单击了该事件');
+        },300);
+    });
+    $('button').dblclick(function () {
+        clearTimeout(timer);
+        console.log('双击了该事件');
+    })
+</script>
+</body>
+</html>

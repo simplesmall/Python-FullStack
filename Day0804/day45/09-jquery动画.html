@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<button>动画</button>
+<button>动画</button>
+<button>动画</button>
+<div id="box"></div>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        console.log($('button'));
+        var isShow = true;
+        $('button').click(function () {
+            // $('#box').hide();
+
+
+            // $('#box').show(2000,function () {
+            //     //过了前面指定的时间间隔之后执行的操作函数
+            //     alert(13);
+            // });
+
+
+            // $('#box').fadeIn(2000,function () {
+            //     alert('Output successful!!');
+            // });
+
+            // $('#box').slideDown(2000);
+
+            if (isShow) {
+                // $('#box').slideUp(3000);
+                $('#box').stop().slideUp(3000);
+                isShow = false;
+            }else {
+                $('#box').stop().slideDown(3000);
+                isShow = true;
+            }
+
+        })
+
+    });
+</script>
+</body>
+</html>

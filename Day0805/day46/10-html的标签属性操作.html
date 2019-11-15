@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            background-color: red;
+        }
+        .active{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        $('.box').html('<a id="anchor"></a>')
+        $('#anchor').attr('href', 'http://www.baidu.com').text('百度一下');
+        console.log($('#anchor').attr('id'));
+
+        //  这样一来就可以一直往下追加
+        $('#anchor').attr({
+            title: '123',
+            class: 'test'
+        })
+        $('body').click(function () {
+            $('.test').addClass('active')
+            $('.test').removeClass('test')
+        })
+    });
+
+</script>
+
+</body>
+</html>

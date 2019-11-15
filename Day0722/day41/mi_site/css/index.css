@@ -1,0 +1,287 @@
+/*清除默认样式*/
+*{
+	padding: 0;
+	margin: 0;
+}
+/*reset.css*/
+
+ul,ol{
+	list-style: none;
+}
+a{
+	text-decoration: none
+}
+body{
+	font:14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+	color: #333;
+
+}
+
+.site-bar{
+	width: 100%;
+	height: 188px;
+	background: url(../images/guanggao.jpg) no-repeat center top;
+}
+.site-bar a{
+	width: 100%;
+	height: 120px;
+	display: block;
+}
+
+/*顶部栏样式*/
+.topBar{
+	width: 100%;
+	height: 40px;
+	font-size: 12px;
+	line-height: 40px;
+	background-color: #333;
+}
+.container{
+	width: 1226px;
+	/*overflow: hidden;*/
+	margin: 0 auto;
+}
+/*清除浮动*/
+.clearfix:after{
+	content: '.';
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+
+}
+.topBar .top-l{
+	float: left;
+	cursor: pointer;
+}
+.topBar a{
+	color: #b0b0b0;
+}
+.topBar a:hover{
+	color: #fff;
+}
+.topBar span.sep{
+	color: #424242;
+	margin: 0 .5em;
+}
+.topBar .top-shop{
+	float: right;
+	margin-left: 20px;
+	position: relative;
+}
+.topBar .top-shop a{
+	display: block;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+.topBar .top-shop a:hover{
+	background-color: #fff;
+	color: #ff6700;
+}
+
+.topBar .top-shop a i{
+	font-size: 18px; 
+	/*vertical-align: -2px;*/
+	position: relative;
+    top:2px;
+}
+.top-shop .cart-menu{
+	position: absolute;
+	width: 238px;
+	height: 100px;
+	top: 40px;
+	background-color: red;
+	left: -118px;
+	display: none;
+
+}
+.top-shop:hover  .cart-menu{
+	display: block;
+}
+
+.topBar .top-info{
+	float: right;
+}
+/*.top-shop .cart{*/
+    /*position: absolute;*/
+    /*width:200px;*/
+    /*height:200px;*/
+    /*background-color: green;*/
+    /*left:50px;*/
+    /*display:none;*/
+/*}*/
+/*.top-shop:hover .cart{*/
+    /*display:block;*/
+/*}*/
+
+/*导航栏样式*/
+.site-header{
+    width:100%;
+    height:100px;
+}
+.site-header .header-logo{
+    float:left;
+    height:100px;
+    margin-top: 46px;
+}
+.header-logo a{
+    display:block;
+    width:55px;
+    height:55px;
+    background:#ff6700 url(http://img2.imgtn.bdimg.com/it/u=2372505107,3571797751&fm=26&gp=0.jpg) center center;
+}
+.site-header .header-nav{
+    float:left;
+    width: 850px;
+}
+.header-nav ul{
+    width:100%;
+    padding-top: 12px;
+    height:88px;
+    line-height: 88px;
+    padding: 12px 0 0 30px;
+}
+.header-nav ul>li{
+    float: left;
+    padding:26px 10px 38px;
+}
+.header-nav ul li.nav-category{
+    width:165px;
+    height:100px;
+    position: relative;
+    top: -7px;
+}
+.header-nav ul li.nav-category a{
+    display: block;
+    width: 165px;
+    height:100px;
+}
+.header-nav ul li.nav-item a{
+    /*padding:26px 10px 38px;*/
+    color:#333;
+}
+.header-nav ul li.nav-item a:hover{
+    color:#ff6700;
+}
+
+.site-header .header-search{
+    float:right;
+    width: 296px;
+    margin-top: 25px;
+}
+.header-search form{
+    position: relative;
+    width: 100%;
+    height:50px;
+    top: 30px;
+}
+.header-search form input{
+    border:0;
+    border:1px solid #e0e0e0;
+}
+.header-search form input[type='text']{
+    padding:0 10px;
+    width:223px;
+    height:48px;
+    position: absolute;
+}
+.header-search form input[type='submit']{
+    width:52px;
+    height:50px;
+    position:absolute;
+    right:0;
+    background-color: #999999;
+}
+.header-search form input[type='submit']:hover{
+    background-color: #ff6700;
+}
+.header-search form .search-hot-words{
+    position: absolute;
+    right: 113px;
+    top:17px;
+}
+.header-search form .search-hot-words a.t{
+    color:#757575;
+    padding: 0 5px;
+}
+.header-search form .search-hot-words a.y{
+    color:#757575;
+    padding: 0 5px;
+}
+.header-search form .search-hot-words a:hover{
+    background-color: #ff6700;
+    color: #fff;
+}
+
+/* site-category */
+.site-category{
+    position: absolute;
+    width:234px;
+    height: 440px;
+    background-color: rgba(0,0,0,.6);
+    top: 171px;
+    left:-84px;
+    padding-top: 20px;
+    z-index: 111;
+}
+.site-category ol>li{
+    width:204px;
+    height:42px;
+    line-height:42px;
+    padding-left: 30px;
+    color:#fff;
+}
+.site-category ol>li:hover{
+    background-color: #ff6700;
+}
+/*小米轮播图样式*/
+.slider{
+    width:100%;
+}
+.site-lunbo{
+    position: relative;
+}
+.site-lunbo a{
+    diaplay:block;
+    width:100%;
+}
+.site-lunbo a img{
+    width:1226px;
+    height:460px;
+}
+.site-lunbo a.next{
+    position: absolute;
+    width:41px;
+    height:69px;
+    background: url(http://img5.imgtn.bdimg.com/it/u=1363578379,2731246696&fm=26&gp=0.jpg)
+    no-repeat -130px 0;
+    background-color:red;
+    top: 50%;
+    right:0;
+}
+.site-lunbo a.next:hover{
+    background-position: -45px 0;
+}
+
+/*圆点圆角显示*/
+.slider .ttt{
+    position:absolute;
+    width:300px;
+    height: 50px;
+    bottom:-8px;
+    right:-77px;
+}
+.slider span.circle{
+    width:6px;
+    height:6px;
+    background-color: green;
+    border: 1px solid red;
+    border-radius: 50%;
+    margin: 0 10px;
+    display: inline-block;
+}
+.slider .circle:hover{
+    background-color: #e9f7fa;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .box1{
+            width: 200px;
+            height:200px;
+            background-color: red;
+        }
+        .box2{
+            width: 200px;
+            height:200px;
+            background-color: green;
+            /*
+            不脱标
+            使用 relative 就可以直接使用 top left right bottom
+            当只设置 relative而不设置其他参数的时候,跟普通的定位没有差别
+            参考点是相对于原来的位置
+            */
+            position: relative;
+            top: 20px;
+            left:50px;
+            z-index: 2;
+        }
+        .box3{
+            width: 200px;
+            height:200px;
+            background-color: blue;
+            position: relative;
+            z-index: 3;
+        }
+    </style>
+</head>
+<!--
+    定位:默认:  position:static 静态定位
+    position: relative 相对定位
+              absolute  绝对定位
+              fixed  固定定位
+
+-->
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+</body>
+</html>

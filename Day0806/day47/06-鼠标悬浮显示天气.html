@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather get test</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<a href="javascript:void(0);">北京</a>
+<div class="box"></div>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        function init() {
+            $.ajax({
+                // url: `https://free-api.heweather.net/s6/weather/now?location=${cityVal}&key=a76424d4197f4504bf701f83502dde60`,
+                url: `https://free-api.heweather.net/s6/weather/now?location=kunming&key=a76424d4197f4504bf701f83502dde60`,
+                type: 'get',
+                success: function (data) {
+                    console.log(data);
+                    console.log(data.HeWeather6[0].now.tmp);
+                    console.log(data.HeWeather6[0].now.cond_txt);
+                    var temp = data.HeWeather6[0].now.tmp;
+                    var tempT = `${temp}℃`;
+                    $('.box').html(tempT);
+
+                    // 将地名添加到a标签中
+                    var cityName = data.HeWeather6[0].basic.location;
+                    $('a').html(cityName);
+                },
+                error: function (err) {
+                    alert(err);
+                }
+            });
+        }
+
+        init();
+
+        $('a').mouseenter(function () {
+            setTimeout(function () {
+                $('.box').show();
+            }, 500)
+        })
+
+    })
+</script>
+</body>
+</html>

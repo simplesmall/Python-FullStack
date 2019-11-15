@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data</title>
+    <style>
+        .box {
+            width: 40px;
+            height: 40px;
+            background-color: #4efbe3;
+        }
+        .item{
+            position: relative;
+            padding:10px 20px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="box">BB</div>
+<div class="content">
+    <!--<div class="item"></div>-->
+    <!--<div class="item"></div>-->
+    <!--<div class="item"></div>-->
+</div>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        $('.box').mouseenter(function () {
+            $('.content').show();
+            $.ajax({
+                url: `https://free-api.heweather.net/s6/weather/forecast?location=kunming&key=a76424d4197f4504bf701f83502dde60`,
+                type: 'get',
+                success: function (data) {
+                    console.log(data.HeWeather6[0].daily_forecast);
+                    var datas = data.HeWeather6[0].daily_forecast;
+
+                    $('.content').empty();
+                    datas.forEach(function (item,index) {
+                        // $('.content .item').eq(index).html(item.tmp_max);
+
+                        $('<div class="item"></div>').appendTo('.content').html(item.tmp_max);
+                    })
+                }
+            })
+        })
+        $('.box').mouseleave(function () {
+            $('.content').hide();
+        })
+
+        //  添加事件监听
+        document.getElementsByClassName('box')[0].addEventListener('click',function () {
+            alert('咱个老百姓');
+        },false);
+    })
+</script>
+</body>
+</html>

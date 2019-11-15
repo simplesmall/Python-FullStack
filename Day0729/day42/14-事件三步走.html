@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="box">
+
+    </div>
+    <script>
+        //需求： 默认盒子是200*200 红色 点击盒子让盒子颜色变成绿色
+        var oDiv = document.getElementById('box');
+        console.log(oDiv);
+        var oDiv2 = document.getElementsByClassName('box');
+        console.log(oDiv2);
+        var oDiv3 = document.getElementsByTagName('div');
+        console.log(oDiv3);
+        oDiv.onclick = function () {
+            console.log(oDiv.style);
+            oDiv.style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+</html>

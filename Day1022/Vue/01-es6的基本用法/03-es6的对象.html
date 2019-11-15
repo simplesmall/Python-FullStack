@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6 object</title>
+</head>
+<body>
+<script>
+    /*var person={
+        name:"alex",
+        age:23,
+        fav:function () {
+            console.log(this);
+            console.log(this.name);
+        }
+    }
+    person.fav();
+     */
+    /*let person2 = {
+        name:"Flush",
+        fav:()=>{
+            console.log(this);//this 指向发生了改变。this指向定义person2的父级对象（上下文）
+        }
+    }
+    person2.fav();
+     */
+    let person3={
+        name:"Jiujiang",
+        fav(){
+            console.log(this.name)
+        }
+        // fav:function () {
+        //
+        // }
+    }
+    person3.fav()
+</script>
+</body>
+</html>

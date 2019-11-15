@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather get test</title>
+</head>
+<body>
+<input type="text" placeholder="请输入城市">
+<input type="button" value="获取最新天气">
+<div class="box"></div>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        $('input[type=button]').click(function () {
+            var cityVal = $('input[type=text]').val();
+            console.log(cityVal);
+            $.ajax({
+                url: `https://free-api.heweather.net/s6/weather/now?location=${cityVal}&key=a76424d4197f4504bf701f83502dde60`,
+                // url:`https://free-api.heweather.net/s6/weather/now?location=kunming&key=a76424d4197f4504bf701f83502dde60`,
+                type: 'get',
+                success: function (data) {
+                    console.log(data);
+                    console.log(data.HeWeather6[0].now.tmp);
+                    console.log(data.HeWeather6[0].now.cond_txt);
+                    var temp = data.HeWeather6[0].now.tmp;
+                    var tempT = `${temp}℃`;
+                    $('.box').html(tempT);
+                },
+                error: function (err) {
+                    alert(err);
+                }
+            });
+        })
+    })
+</script>
+</body>
+</html>

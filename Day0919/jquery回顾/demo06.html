@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery demo</title>
+    <script src="jquery-3.3.js"></script>
+</head>
+<body>
+<select name="" id="s1">
+    <option value="0">请选择省份</option>
+    <option value="1">云南省</option>
+    <option value="2">四川省</option>
+    <option value="3">广东省</option>
+    <option value="4">湖北省</option>
+</select>
+<select name="" id="s2">
+    <option value="">请选择城市</option>
+</select>
+<script>
+    $("#s1").change(function () {
+        let data={"1":["红河","建水","昆明"],"2":["南充","成都","峨嵋"],"3":["广州","黄埔","萝岗"],"4":["武汉","襄阳","天水"]};
+        let pro = $(this).val();
+        let citys = data[pro];
+        console.log(citys);
+
+        $("#s2")[0].options.length=1
+
+        $.each(citys,function (i,j) {
+            let option = $("<option>");
+            option.html(j);
+            option.attr("value",i);
+            $("#s2").append(option);
+        })
+    })
+</script>
+</body>
+</html>

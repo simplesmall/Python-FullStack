@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="box">
+        <p id="child1">alex</p>
+    </div>
+    <script>
+        var oDiv = document.getElementById('box');
+        // var oP = document.createElement('abc');
+        // oDiv.appendChild(oP);
+        var op1 = document.getElementById('child1');
+        var op2 = document.createElement('p');
+
+        // 在 op1 前面插入  op2
+        oDiv.insertBefore(op2,op1);
+    </script>
+
+</body>
+</html>

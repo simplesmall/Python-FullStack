@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .fu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 320px;
+            background-color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<a href="javascript:void(0);" id="changeFu">换肤</a>
+<div class="fu">
+    <ul>
+        <li><a href="javascript:void(0);">学习资料</a></li>
+        <li><a href="javascript:void(0);">娱乐中心</a></li>
+        <span class="up">收起</span>
+
+    </ul>
+
+</div>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        // $('button').click(function () {
+        //     $('.fu').style.display = 'block';
+        // });
+        $('#changeFu').click(function (e) {
+            //组阻止当前默认的事件
+            e.preventDefault();
+            //  阻止冒泡
+            e.stopPropagation();
+            //  或者还有更简便的方法,直接在function 的最后面 return false;
+
+
+            console.log(111);
+            $('.fu').slideDown(1000);
+        });
+        $('body,.up').click(function (event) {
+            $('.fu').slideUp(1000);
+        });
+        $('.fu ul li a').click(function () {
+            $(this).css('color', 'green').parent('li').siblings('li').find('a')
+                .css('color','white');
+        });
+        $('.fu').click(function () {
+            return false;
+        })
+    })
+</script>
+
+</body>
+</html>

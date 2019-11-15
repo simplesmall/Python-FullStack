@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shadow</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">隐藏</button>
+<div id="box"></div>
+<script>
+    var oBtn = document.getElementById('btn');
+    var oDiv = document.getElementById('box');
+    var isShow = true;
+    oBtn.onclick = function () {
+        if(isShow){
+            oDiv.style.display = 'none';
+            isShow = false;
+
+            console.log(this);
+            this.innerText = '显示';
+        }else {
+            oDiv.style.display = 'block';
+            isShow = true;
+            console.log(this);
+            this.innerText = '隐藏';
+        }
+    }
+    oBtn.onmouseover = function () {
+        oDiv.style.backgroundColor = 'green';
+    }
+    oBtn.onmouseout = function () {
+        oDiv.style.backgroundColor = 'yellow';
+    }
+</script>
+</body>
+</html>

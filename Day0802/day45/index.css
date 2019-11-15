@@ -1,0 +1,11 @@
+.top{
+    height: 100px;
+    background-color: red;
+}
+#logo{
+    height: 100px;
+    width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #4efbe3;
+}

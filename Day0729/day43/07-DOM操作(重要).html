@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>important DOM</title>
+</head>
+<body>
+    <button id="btn">隐藏</button>
+    <div id="box">
+        <!--<div class="child"></div>-->
+    </div>
+
+    <script>
+        //setTimeout 隔多长时间以后执行操作 
+        setTimeout(function () {
+        var oBox = document.getElementById('box');
+        // DOM 的创建  子元素  节点
+        var oChild = document.createElement('div');
+
+        oChild.className='child';
+        oChild.style.width = '200px';
+        oChild.style.height = '200px';
+        oChild.style.backgroundColor = 'red';
+        // 父.append(子)
+        oBox.appendChild(oChild);
+        },2000)
+    </script>
+</body>
+</html>

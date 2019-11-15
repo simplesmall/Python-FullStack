@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agent</title>
+</head>
+<body>
+<ul>
+    <li>alex</li>
+</ul>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        // $('ul li').click(function () {
+        //     alert(this.innerText);
+        // });
+        //  给它的父级标签绑定事件代理  其 on 里面的四个参数分别带表的是
+        //父级.on('执行的操作','后代选择器(就是对哪些子元素进行监听绑定)',function(){
+        //  执行的操作})
+
+        $('ul').on('click','li',function () {
+            alert(this.innerText);
+        })
+        $('ul').append('<li>wusir</li>');
+    })
+</script>
+</body>
+</html>

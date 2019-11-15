@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selector</title>
+</head>
+<body>
+<div class="father">
+    <p>alex</p>
+    <a href="#">日天</a>
+    <span>村长</span>
+    <div class="g">一宁</div>
+</div>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        // console.log($('.father').find('.g'));
+        $('.father').find('.g').click(function () {
+           console.log(this);
+        });
+    })
+</script>
+
+</body>
+</html>

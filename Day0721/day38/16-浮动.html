@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px
+        }
+        .top-Bar{
+            width:100%;
+            height:40px;
+            background-color: #999;
+        }
+        .container{
+            width:1626px;
+            height: 40px;
+            /*background-color: green;*/
+            /*两边限定来达到让中间那个块存放于中间*/
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .top-Bar .top-1{
+            width: 550px;
+            height: 40px;
+            background-color: yellow;
+            float: left;
+
+        }
+        .top-Bar .top-shop{
+            width:100px;
+            height:40px;
+            background-color: blue;
+            float: right;
+        }
+        .top-Bar .top-info
+        {
+            width: 200px;
+            height:40px;
+            float: right;
+            margin-right: 20px;
+            color:purple;
+        }
+    </style>
+</head>
+<body>
+<div class="top-Bar">
+    <div class="container">
+        <div class="top-1"></div>
+        <div class="top-shop"></div>
+        <div class="top-info"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+        .active{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+<!--    // v-bind 直接省略不写  v-on: 简写为 @-->
+    <img :src="imgSrc" :alt="msg">
+    <button @click="change">切换颜色</button>
+    <div class="box" :class="{active:isActive}"></div>
+</div>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data(){
+            return{
+                imgSrc:'./1.jpg',
+                msg:'美女',
+                isActive:false
+            }
+        },
+        methods:{
+            change(){
+                this.isActive = !this.isActive
+            }
+        }
+    })
+</script>
+</body>
+</html>
+

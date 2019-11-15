@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="future">未来</button>
+<div class="box"></div>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+
+        $('.box').append('<h1 id="a">一宁</h1>');
+
+        var op = document.createElement('p');
+        op.innerText = '一二三';
+        $('.box').append(op);
+
+        //获取的是JSDOM对象或者是获取jquery 对象,append() 相当于一个移动操作
+        var fu = document.getElementById('future');
+        $('.box').append(fu);
+        // 子元素 添加到父元素中去  子.appendTo(父)
+        $('<h2>Another apendto</h2>').appendTo('.box').css('color', 'red').click(function () {
+            $(this).css('color', 'black');
+            alert('This is what makes us girl');
+            console.log($(this).css('color'));
+        });
+
+        $('#a').click(function () {
+            alert('一宁 First');
+        })
+    })
+</script>
+</body>
+</html>

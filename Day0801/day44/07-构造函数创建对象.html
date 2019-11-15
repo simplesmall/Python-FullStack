@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(name,age) {
+        this.name = name;
+        this.age = age;
+        this.fav = function () {
+            alert(this.name);
+        }
+    }
+    var p1 = new Person('Bill',18);
+    p1.fav();
+    console.log(p1 instanceof Person);
+    console.log(p1 instanceof Object);
+</script>
+</body>
+</html>

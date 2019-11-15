@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <img :src="images[currentIndex].imgSrc" alt="" @click="imageClick">
+    <br>
+    <button @click="preClick">上一张</button>
+    <button @click="nexClick">下一张</button>
+</div>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data() {
+            return {
+                images: [
+                    {id: 0, imgSrc: './images/1.jpg'},
+                    {id: 1, imgSrc: './images/2.jpg'},
+                    {id: 2, imgSrc: './images/3.jpg'},
+                    {id: 3, imgSrc: './images/4.jpg'}
+                ],
+                currentIndex: 0
+            }
+        },
+        methods: {
+            preClick() {
+                this.currentIndex--;
+                if (this.currentIndex == 0) {
+                    this.currentIndex = 4
+                }
+            },
+            nexClick() {
+                this.currentIndex++;
+                if (this.currentIndex == 4) {
+                    this.currentIndex = 0
+                }
+            },
+            imageClick(e){
+                console.log(e.target);
+                console.log(this);
+            }
+        },
+        // 组件创建完成 ,ajax   vue的钩子函数
+        created(){
+            // 指向window
+            // setInterval(()=>{
+            //     console.log(this)
+            // },1000)
+            // 将当前this 指向VUE的修改方法
+            var _this =this;
+            setInterval( () => {
+                //  实现自动轮播图的效果
+                _this.currentIndex++;
+                console.log(_this.currentIndex);
+                if(_this.currentIndex==4){
+                    _this.currentIndex=0;
+                }
+            },1000)
+        }
+    })
+</script>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a:hover{
+            color:#ff0000;
+        }
+        a:visited{
+            color: blue;
+        }
+        a:link{
+            font-size: 30px;
+        }
+        a:active{
+            color:black;
+        }
+        .child{
+            display:none;
+        }
+        .father:hover  .child{
+            color:red;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<a href="#">百度一哈</a>
+<div class="father">
+    wusir
+    <p class="child">alex</p>
+</div>
+</body>
+</html>

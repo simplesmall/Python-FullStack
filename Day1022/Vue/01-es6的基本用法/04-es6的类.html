@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6 class</title>
+</head>
+<body>
+<script>
+    /*function  Vue(name,age) {
+        this.name=name;
+        this.age=age;
+    }
+    Vue.prototype,showName = ()=>{
+        console.log(this.name)
+    }
+    var V1 = Vue("alex",13);
+    V1.showName()
+     */
+    class Person{
+        constructor(name="alex",age=17){
+            this.name=name;
+            this.age=age;
+        }
+        showName(){
+            console.log(this.name)
+        }
+        showAge = () =>{
+            console.log(this.age)
+        }
+    }
+    var per =new Person();
+    per.showName();
+    per.showAge();
+</script>
+</body>
+</html>

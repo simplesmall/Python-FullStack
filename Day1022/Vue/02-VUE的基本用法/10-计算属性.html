@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>watch</title>
+</head>
+<body>
+<div id="app">
+    <h2>{{ myMsg }}</h2>
+    <button @click='clickHandler'>修改</button>
+</div>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data(){
+            return{
+                msg:'alex',
+                age:18
+            }
+        },
+        methods:{
+            clickHandler(){
+                this.msg="wusir"
+                this.age=20
+            }
+        },
+        computed:{
+            myMsg:function () {
+                //计算属性默认只有getter方法
+                return `我的名字是${this.msg},我的年龄是${this.age}`;
+            }
+        }
+    })
+</script>
+</body>
+</html>

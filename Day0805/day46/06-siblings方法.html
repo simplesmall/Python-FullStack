@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sibling</title>
+</head>
+<body>
+<ul>
+    <li>尚硅谷</li>
+    <li>大衣女各界</li>
+    <li>少红珠</li>
+    <li>烤猪蹄</li>
+</ul>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        $('ul li').click(function () {
+            // $(this).css('color','red');
+            // //将其它标签元素的颜色设置为无
+            // $(this).siblings('li').css('color','black');
+
+            //整合成一条命令
+            $(this).css('color','red').siblings('li').css('color','black');
+        })
+    })
+</script>
+</body>
+</html>

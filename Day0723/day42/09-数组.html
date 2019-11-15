@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+<script>
+    //字面方式创建
+    var arr = ['alex','武sir','涛哥'];
+    console.log(arr);
+    //构造函数方式创建
+    //在ECMAScript5中没有类的概念,创建对象使用构造函数  new
+    //构造函数和方法函数的不同之处在于构造函数的首字母大写
+    var arr1 = new Array();
+    arr1[0] = 'xxx';
+    console.log(arr1);
+
+    //字符串的拼接
+    var region = ['first','second','third'];
+    var newarr = region.concat('forth');
+    console.log(newarr);
+
+     var ano = ['lala','xixi','haha'];
+     ano.shift();
+     console.log(ano);
+    ano.unshift('bibiibib');
+    console.log(ano);
+    for(var i= 0;i<ano.length;i++){
+        console.log(ano[i]);
+        document.write(ano[i]);
+    }
+
+    var str= 'alex';
+    var charset = str.charAt(3);
+    console.log(charset);
+    var date  = new Date();
+    console.log(date);
+    console.log(date.getDate());
+    console.log(date.toLocaleDateString());
+    // min ~ max
+    // min + Math.random()*(max-min)
+    console.log(200+Math.random()*(500-200));
+</script>
+
+</body>
+</html>

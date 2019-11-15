@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>watch</title>
+</head>
+<body>
+<div id="app">
+    <h2>{{ msg }}</h2>
+    <button @click='clickHandler'>修改</button>
+</div>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data(){
+            return{
+                msg:'alex'
+            }
+        },
+        methods:{
+            clickHandler(){
+                this.msg="wusir"
+            }
+        },
+        watch:{
+            //监听单个的属性
+            'msg':function (value) {
+                console.log(value)
+                if(value === 'wusir'){
+                    this.msg = '大大大wusir'
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

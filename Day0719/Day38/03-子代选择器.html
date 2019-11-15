@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--子代选择器
+        只会选择直系子代的标签
+    -->
+    <style>
+        .father>p{
+            color:red;
+        }
+        .father>ul>li{
+            color: #4efbe3;
+            font-size: 30px;
+        }
+        .inherite{
+            color:blue;
+        }
+
+    </style>
+</head>
+<body>
+<div class="father">
+    <p>123</p>
+    <p>234</p>
+    <p>34</p>
+    <p>34234</p>
+    <div class="content">
+        <p>lalalla</p>
+    </div>
+    <ul>
+        <li>
+            选中了
+            <ul>
+                <li>没有选中</li>
+            </ul>
+            <p>
+                <ul>
+                <li>没有选中</li>
+            </ul>
+            </p>
+        </li>
+    </ul>
+</div>
+<div class="inherite">
+    <!--没有直接给p标签赋值属性但是由于是继承自inherite类所以属性都继承下来了-->
+    <p>继承下来的属性</p>
+</div>
+</body>
+</html>

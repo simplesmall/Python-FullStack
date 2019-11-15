@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+</head>
+<body>
+<script>
+    /* 方法一
+    var person = new Object();
+    person.name = 'alex';
+    person.age = 18;
+    person.fav = function () {
+        alert(this.name);
+    }*/
+    // person.fav();
+
+    //方法二
+   /* var person={
+        name:'911',
+        age:78,
+        fav:function() {
+            alert(this.name);
+        }
+    };
+    person.fav();*/
+
+   //工厂方法生产对象
+   function  createPerson(name,age) {
+       var person = new Object();
+       person.name = name;
+       person.age = age;
+       person.fav = function () {
+        alert(this.name);
+        }
+        return person;
+   }
+   var p1 = createPerson('sdfuhi',6578);
+   var p2 = createPerson('sdgyh',54);
+   var p3 = createPerson('sdguy',567);
+   p1.fav();
+   p2.fav();
+   p3.fav();
+</script>
+</body>
+</html>

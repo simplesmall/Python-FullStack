@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather get test</title>
+</head>
+<body>
+<div class="box"></div>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        // init();
+        setTimeout(init,2000);
+        function init() {
+            $.ajax({
+                // url: `https://free-api.heweather.net/s6/weather/now?location=${cityVal}&key=a76424d4197f4504bf701f83502dde60`,
+                url: `https://free-api.heweather.net/s6/weather/now?location=kunming&key=a76424d4197f4504bf701f83502dde60`,
+                type: 'get',
+                success: function (data) {
+                    console.log(data);
+                    console.log(data.HeWeather6[0].now.tmp);
+                    console.log(data.HeWeather6[0].now.cond_txt);
+                    var temp = data.HeWeather6[0].now.tmp;
+                    var tempT = `${temp}℃`;
+                    $('.box').html(tempT);
+                },
+                error: function (err) {
+                    alert(err);
+                }
+            });
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let</title>
+</head>
+<body>
+<div id="app">
+    <App></App>
+</div>
+</body>
+<script src="vue.js"></script>
+<script>
+<!--    声明子-->
+    let App = {
+        data() {
+            return {
+                text: "我是日天"
+            }
+        },
+        template: `
+        <div id="a">
+         <h2>{{ text }}</h2>
+        </div>
+        `,
+        methods:{
+
+        }
+    }
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                msg: 'alex'
+            }
+        },
+        //用子
+        template: `
+        <div class="app">
+        <App></App>
+    </div>
+        `,
+        //挂子
+        components:{
+            App
+        }
+    })
+</script>
+</html>

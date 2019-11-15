@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li class="item">first</li>
+    <li>second</li>
+    <li>third</li>
+</ul>
+<script src="jquery.js"></script>
+<script>
+    var datas = ['blue', 'green', 'yellow'];
+    //jquery 转js 对象
+    console.log($('li')[0]);
+
+    var item = document.getElementsByClassName('item')[0];
+    //让js对象转换jquery对象
+    console.log(item);
+    $(item).css('color','red').click(function(){
+        alert(12);
+    })
+
+    for (var i = 0; i < datas.length; i++) {
+        // console.log($('li')[i]);
+        $('li')[i].style.backgroundColor = datas[i];
+    }
+</script>
+</body>
+</html>

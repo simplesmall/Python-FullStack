@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .add{
+            font-size: 30px;
+            color: red;
+            background-color: #4efbe3;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">删除</button>
+<ul>
+    <li class="item">alex</li>
+</ul>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        $('.item').after('<li>wusir</li>');
+        $('.item').before('<h3>Before</h3>');
+        $('<h5>insertAfter .item</h5>').insertAfter('.item');
+        $('<h5>insertBefore .item</h5>').insertBefore('.item');
+        $('h5').mouseenter(function () {
+            $('h5').css('color', 'red');
+        })
+        $('h5').mouseout(function () {
+            $('h5').css('color', 'black');
+        })
+
+        $('.item').replaceWith('<p>replaceWith content</p>');
+        var isAdd = true;
+        $('p').hover(function () {
+            if(isAdd){
+                $('p').addClass('add');
+                isAdd = false;
+            }else {
+                $('p').removeClass('add');
+                isAdd = true;
+            }
+        })
+        $('p').css('color','green');
+
+        $('#btn').click(function () {
+            // $('h5').remove();
+        })
+    })
+</script>
+</body>
+</html>
+

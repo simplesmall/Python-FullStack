@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 400px;
+            height:300px;
+            background-color: red;
+        }
+        /*
+        让浮动盒子居中:
+            给浮动盒子加一个父盒子,设置宽度跟浮动盒子一样大小,
+            并且overflow:hidden  设置该盒子margin: 0 auto
+        */
+        .main{
+            width: 100px;
+            overflow:hidden;
+            margin: 0 auto;
+        }
+        .child{
+            width:100px;
+            height:100px;
+            background-color: green;
+            margin:  0 auto;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="main">
+        <div class="child"></div>
+    </div>
+</div>
+</body>
+</html>

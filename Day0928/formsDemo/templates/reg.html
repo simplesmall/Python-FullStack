@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+{#<form action="" method="post">#}
+{#    {% csrf_token %}#}
+{#    <p>用户名: <input type="text" name="user"><span>{{ errors.user.0 }}</span></p>#}
+{#    <p>密码: <input type="password" name="pwd"><span>{{ errors.pwd.0 }}</span></p>#}
+{#    <p>邮箱: <input type="email" name="email">{{ errors.email.0 }}</p>#}
+{#    文件: <input type="file" name="file">#}
+{#    <input type="submit">#}
+{#</form>#}
+
+{#<form action="" method="post">#}
+{#    {% csrf_token %}#}
+{#    {{ form.as_p }}#}
+{#    生成的是按照form校验组件的字段来生成input,且带有id=id_label,不足之处是样式是写死的不方便自定义以及修改,#}
+{#    在使用之前必须得先在后台定义 form=UserForm() ,然后locals()将变量数据传回来#}
+{#    #}
+{#    <input type="submit">#}
+{#</form>#}
+
+{#  添加了 novalidate 之后前端浏览器将不再对数据进行校验    #}
+{#<div class="container">#}
+{#    <div class="row">#}
+{#        <div class="col-md-8 col-md-offset-3">#}
+{#            <form action="" method="post" novalidate>#}
+{#                {% csrf_token %}#}
+{#                <p>用户名: {{ form.user }}<span>{{ errors.user.0 }}</span></p>#}
+{#                <p>密码: {{ form.pwd }}<span>{{ errors.pwd.0 }}</span></p>#}
+{#                <p>邮箱: {{ form.email }}{{ errors.email.0 }}</p>#}
+                {#    文件: <input type="file" name="file">#}
+{#                <input type="submit" class="btn btn-success pull-right">#}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-3">
+            <form action="" method="post" novalidate>
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group">
+                        <label for="">{{ field.label }}</label>
+                        {{ field }} <span class="error"> {{ field.errors.0 }}</span>
+                        {% if field.label == "确认密码" %}
+                            <span class="error">{{ g_error|default:"" }}</span>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                <input type="reset">
+                <input type="submit" class="btn btn-success pull-right">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

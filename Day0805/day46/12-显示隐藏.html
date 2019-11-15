@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #4efbe3;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">影藏</button>
+<div class="box">
+
+</div>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        var isShow = true;
+        $('button').click(function () {
+            if (isShow) {
+                $('.box').addClass('hidden');
+                isShow = false;
+            } else {
+                $('.box').removeClass('hidden');
+                isShow = true;
+            }
+
+        })
+        $('.box').eq(0).prop('abc','1123');
+        console.log($('.box').eq(0));
+        // $('.box').eq(0).removeProp('abc');
+        console.log($('.box').eq(0));
+    })
+</script>
+</body>
+</html>

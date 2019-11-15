@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+        浮动:脱离了标准文档流
+            好处是使元素实现并排
+        浮动带来的问题:子盒子浮动,不再页面占位置
+        如果父盒子不设置高度,那么撑不起父盒子高度
+    -->
+    <style>
+        .box{
+            width: 100px;
+            height:100px;
+            background-color: red;
+            /*
+            默认 overflow:visible
+            */
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    alexalexakekjdfdgbfjkhsdj
+</div>
+
+</body>
+</html>

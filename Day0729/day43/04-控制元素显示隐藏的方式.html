@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shade</title>
+    <style>
+        .child {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        .hidden {
+         display: none;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">影藏</button>
+<div class="box">
+    <div class="child hidden" id="child"></div>
+</div>
+
+<script>
+    var oChild = document.getElementById('child');
+    oChild = document.getElementById('child');
+    document.getElementById('btn').onclick = function () {
+        oChild.className += 'hidden';
+    }
+    console.log(oChild.className);
+    console.log(this.innerText);
+    console.log(this.innerHTML);
+</script>
+
+</body>
+</html>

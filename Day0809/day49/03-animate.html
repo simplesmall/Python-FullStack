@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/animate.css">
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            background-color: greenyellow;
+            color: #fff;
+            position: absolute;
+            top: 1000px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+<!--<h2 class="animated bounce">alex</h2>-->
+<div id="box">wusir</div>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        $(document).scroll(function () {
+            console.log($(this).scrollTop());
+            var scrollTopHeight = $(this).scrollTop();
+            // if(scrollTopHeight >= 300){
+            //     $('#box').addClass('animated bounce');
+            // }
+            if(scrollTopHeight >= 500){
+                $('#box').addClass('animated bounceOutRight');
+            }
+        })
+    })
+</script>
+</body>
+</html>

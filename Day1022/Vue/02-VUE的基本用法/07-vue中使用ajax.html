@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span.active{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div>
+        <span v-for = '(categpry,index) in categpryList' :class = '{active:currentIndex === index}' @mouseover = 'handleClick(index,category)'>
+            Index:{{ index }} ---- Name:{{ categpry.name }} --- CategoryID:{{ categpry.id }} ---- CategoryBelong:{{ categpry.belong }} <br>
+        </span>
+    </div>
+</div>
+<script src="vue.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data() {
+            return {
+                categpryList:[],
+                currentIndex:0
+            }
+        },
+        methods: {
+            handleClick(click,id){
+                this.currentIndex=click;
+                $.ajax({
+                    url:`https://www.luffycity.com/api/v1/course_sub/category/list/?sub_category=${id}`,
+                    type:'get',
+                    success:(data)=>{
+                        var data = data.data;
+                        console.log(data);
+                    }
+                })
+            }
+        },
+        created(){
+            // this 指向问题,能用箭头函数就不要用function的写法
+            $.ajax({
+                url:'https://www.luffycity.com/api/v1/course_sub/category/list/',
+                type:'get',
+                success:(data) =>{
+                    if(data.error_no === 0){
+                        var data = data.data;
+                        let obj = {
+                            id:0,
+                            name:"全部",
+                            category:0
+                        }
+                        this.categpryList = data;
+                        this.categpryList.unshift(obj)
+                    }
+                },
+                error:function (err) {
+                    console.log(err)
+                }
+            })
+        }
+    })
+</script>
+</body>
+</html>
+

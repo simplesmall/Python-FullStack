@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery</title>
+</head>
+<style>
+    .wrap{
+        width: 100px;
+        height: 100px;
+        background-color: purple;
+    }
+</style>
+<body>
+<div id="box" class="wrap">
+    dfbjk
+</div>
+<!--导入模块-->
+<script type="text/javascript" src="./jquery.js"></script>
+<script>
+    console.log(jQuery('#box'));
+    //  变量赋值
+    var $ = jQuery;
+    console.log($('.wrap'));
+
+    $('#box').click(function () {
+        $('.wrap').css({
+            'color':'red',
+            'backgroundColor':'yellow',
+            fontSize:30,
+            width:'300px',
+        });
+    })
+</script>
+</body>
+</html>

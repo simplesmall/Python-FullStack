@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo02</title>
+    <script src="jquery-3.3.js"></script>
+</head>
+<body>
+<ul>
+    <li>123</li>
+    <li>456</li>
+    <li>132</li>
+</ul>
+<button class="btn">Button</button>
+<script>
+    <!--存在的问题是后面添加的代码没有之前那些代码块的属性-->
+    // $("ul li").click(function () {
+    //     alert($(this).html())
+    // });
+
+    //-----------新方法解决以上问题
+    $("ul").on("click","li",function () {
+        alert($(this).html())
+    })
+    $(".btn").click(function () {
+        $("ul").append("<li>678</li>")
+    });
+
+    var arr=[12,34,56]
+    $.each(arr,function (i,j) {
+        console.log(i,j)
+    });
+    var obj = {"name":"alex","age":123}
+    $.each(obj,function (i,j) {
+        console.log(i,j)
+    });
+
+    $("ul li").each(function () {
+        console.log($(this).html())
+    })
+</script>
+</body>
+</html>

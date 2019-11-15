@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h4>Hello index</h4>
+<p>{{ personList.2.name }}</p>
+
+<!--只能调无参方法,且必须有返回值,显示的是return 的返回值-->
+<p>{{ personList.2.running }}</p>
+<p>{{Kwan.Sec}}</p>
+
+<p>过滤器</p>
+<p>{{now|date:"Y-M-D"}}</p>
+
+<p>{{ book_list|default:"没有适合的书显示" }}</p>
+<p>{{personList|length}}</p>
+<p>{{personList|filesizeformat}}</p>
+<p>{{ sliceTest|slice:"0:-1" }}</p>
+<p>{{link|safe}}</p>
+{% for item in personList %}
+        <p>{{forloop.counter}}  {{ item.name }}</p>
+
+    {%if item.name == 'Alex' %}
+        <p>输出是ALex</p>
+    {% else %}
+        <p>输出是{{ item.name }}</p>
+    {% endif %}
+
+{% endfor %}
+
+<p>
+    {% with name=personList.2.name  %}
+    With name is: {{name}}
+    {%endwith%}
+</p>
+</body>
+</html>

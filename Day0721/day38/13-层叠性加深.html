@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        <!-- id > class > 标签
+        可以采用三位计数法的方法来统一显示和比较优先级,
+        从最高位的最大数依次排序
+        -->
+        /*都是继承来的,都一样深 */
+        #father1 #father2 .box3{
+            color:red;
+        }
+        #father1 .box2 .box3{
+            color:blue;
+        }
+        /*如果都是继承来的属性,保持就近原则*/
+        /*都是继承来的属性,选择的标签一样近,再去数权重*/
+    </style>
+</head>
+<body>
+<div class="box1" id="father1">
+    <ul class="box2" id="father2">
+        <li class="box3" id="father">
+            <p class="box4" id="child"> 猜猜我的颜色</p>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

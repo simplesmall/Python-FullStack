@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Counter</title>
+    <style>
+        #box {
+            width: 40px;
+            height: 40px;
+            background-color: #4efbe3;
+        }
+    </style>
+</head>
+<body>
+<button id="start">开启定时器</button>
+<button id="interval">interval定时器</button>
+<div id="box"></div>
+
+<script>
+    document.getElementById('start').onclick = function () {
+        setTimeout(function () {
+            alert(111);
+        }, 3000)
+    }
+    var count = 0;
+    var timer = null;
+    document.getElementById('interval').onclick = function () {
+        var oBox = document.getElementById('box');
+        clearInterval(timer);
+        timer = setInterval(function () {
+            count += 23;
+            oBox.style.marginLeft = count + 'px';
+        }, 200)
+    }
+</script>
+
+</body>
+</html>

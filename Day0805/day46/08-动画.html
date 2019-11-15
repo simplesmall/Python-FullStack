@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">动画</button>
+    <div class="box"></div>
+    <script src="jquery.js"></script>
+    <script>
+        $(function () {
+            $('.btn').click(function () {
+                // $('.box').hide();
+                $('.box').stop().toggle('fast');
+            })
+        })
+    </script>
+</body>
+</html>

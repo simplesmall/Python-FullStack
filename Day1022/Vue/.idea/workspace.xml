@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5f17e04d-b971-45a6-bf5b-daee31220bef" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day02/过滤器.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day02/全局 过滤器.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/01-es6的及基本用法.html" />
+        <option value="$PROJECT_DIR$/02-es6的函数.html" />
+        <option value="$PROJECT_DIR$/03-es6的对象.html" />
+        <option value="$PROJECT_DIR$/04-es6的类.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/vue.js" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/01-vue的基本使用.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/02-指令系统只v-text和v-html.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/03-vue的v-if和v-show.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/04-vue的v-bind和v-on.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/05-v-for指令.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/06-vue轮播图.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/07-vue中使用ajax.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/08-音乐播放器.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/09-watch监听器.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/10-计算属性.html" />
+        <option value="$PROJECT_DIR$/PWA/index.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/Self_Suit.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/Self_Suit01.html" />
+        <option value="$PROJECT_DIR$/02-VUE的基本用法/H5.html" />
+        <option value="$PROJECT_DIR$/PWA/sw-toolbox.js" />
+        <option value="$PROJECT_DIR$/PWA/style/style.css" />
+        <option value="$PROJECT_DIR$/PWA/sw.js" />
+        <option value="$PROJECT_DIR$/PWA/H5.html" />
+        <option value="$PROJECT_DIR$/First-APP/public/index.html" />
+        <option value="$PROJECT_DIR$/day02/01-数据的双向绑定.html" />
+        <option value="$PROJECT_DIR$/day02/02-数据的双向绑定js实现.html" />
+        <option value="$PROJECT_DIR$/day02/03-局部组件的使用.html" />
+        <option value="$PROJECT_DIR$/day02/moment.js" />
+        <option value="$PROJECT_DIR$/day02/过滤器.html" />
+        <option value="$PROJECT_DIR$/day02/全局 过滤器.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="2" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vue" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DjangoBlog" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FullStackD\Stack15\Day1022\Vue\PWA" />
+      <recent name="D:\FullStackD\Stack15\Day1022\Vue\PWA\static" />
+      <recent name="D:\FullStackD\Stack15\Day1022\Vue\02-VUE的基本用法\images" />
+      <recent name="D:\FullStackD\Stack15\Day1022\Vue\01-es6的基本用法" />
+      <recent name="D:\FullStackD\Stack15\Day1022\Vue\、" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FullStackD\Stack15\Day1022\Vue\day02" />
+      <recent name="D:\FullStackD\Stack15\Day1022\Vue" />
+      <recent name="D:\FullStackD\Stack15\Day1022\Vue\First-APP\public\styles" />
+      <recent name="D:\FullStackD\Stack15\Day1022\Vue\First-APP\public" />
+      <recent name="D:\FullStackD\Stack15\Day1022\Vue\PWA\static" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f17e04d-b971-45a6-bf5b-daee31220bef" name="Default Changelist" comment="" />
+      <created>1571729397393</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571729397393</updated>
+      <workItem from="1571729399547" duration="1741000" />
+      <workItem from="1571742756998" duration="1375000" />
+      <workItem from="1571790040009" duration="17865000" />
+      <workItem from="1571875725274" duration="6298000" />
+      <workItem from="1571914557913" duration="6115000" />
+      <workItem from="1571962386170" duration="573000" />
+      <workItem from="1572351098855" duration="120000" />
+      <workItem from="1572351271191" duration="1086000" />
+      <workItem from="1572417965114" duration="2265000" />
+      <workItem from="1573000223870" duration="5427000" />
+      <workItem from="1573086949696" duration="1199000" />
+      <workItem from="1573432199764" duration="605000" />
+      <workItem from="1573518122072" duration="89000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="44758000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="2" width="1936" height="1056" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14498934" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26807564" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16577825" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/01-es6的基本用法/04-es6的类.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-es6的基本用法/03-es6的对象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-es6的基本用法/02-es6的箭头函数.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-es6的基本用法/01-es6的及基本用法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="11934" column="48" lean-forward="true" selection-start-line="11934" selection-start-column="48" selection-end-line="11934" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/01-vue的基本使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/02-指令系统只v-text和v-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/03-vue的v-if和v-show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1089">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/04-vue的v-bind和v-on.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/05-v-for指令.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/06-vue轮播图.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/07-vue中使用ajax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="51" column="34" lean-forward="true" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/08-音乐播放器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/09-watch监听器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PWA/vue.js" />
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/Self_Suit01.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/Self_Suit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PWA/index.html" />
+    <entry file="file://$PROJECT_DIR$/PWA/sw.js" />
+    <entry file="file://$PROJECT_DIR$/PWA/sw-toolbox.js" />
+    <entry file="file://$PROJECT_DIR$/First-APP/Your-First-PWA-Codelab.code-workspace" />
+    <entry file="file://$PROJECT_DIR$/First-APP/watch.json" />
+    <entry file="file://$PROJECT_DIR$/First-APP/CONTRIBUTING.md" />
+    <entry file="file://$PROJECT_DIR$/First-APP/server.js" />
+    <entry file="file://$PROJECT_DIR$/First-APP/public/styles/style.css" />
+    <entry file="file://$PROJECT_DIR$/First-APP/public/index_pre.html" />
+    <entry file="file://$PROJECT_DIR$/pwa-tutorial/demo/js/build/script.min.js" />
+    <entry file="file://$PROJECT_DIR$/First-APP/public/index.html" />
+    <entry file="file://$PROJECT_DIR$/First-APP/.env" />
+    <entry file="file://$PROJECT_DIR$/PWA/style/style.css" />
+    <entry file="file://$PROJECT_DIR$/First-APP/public/offline.html" />
+    <entry file="file://$PROJECT_DIR$/PWA/H5.html" />
+    <entry file="file://$PROJECT_DIR$/day02/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-VUE的基本用法/10-计算属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day02/01-数据的双向绑定.html" />
+    <entry file="file://$PROJECT_DIR$/day02/02-数据的双向绑定js实现.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day02/03-局部组件的使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day02/moment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="3194" column="4" selection-start-line="3194" selection-start-column="4" selection-end-line="3194" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day02/过滤器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day02/全局 过滤器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

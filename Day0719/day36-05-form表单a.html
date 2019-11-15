@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 与服务器进行交互  a img link默认是get方式请求-->
+	<form action="" method="get" enctype="multipart/form-data"> 
+		<p class="user">
+			<label for="username">用户名:</label>
+			&nbsp;
+			<input type="text" name="username" placeholder="请输入用户名">
+		</p>
+		<!-- 输入框 -->
+		<p class="pwd">
+			<label for="pwd">密&nbsp;&nbsp;码:</label>
+			&nbsp;&nbsp;
+			<input type="password" name="pwd">
+		
+		</p>
+		<p>
+			<input type="file" name="mp3">
+		</p>
+		<!-- 按钮 -->
+		<p class="register">
+			<input type="submit" value="注册">
+			<input type="reset" value="重置">
+			<button type="button">普通按钮</button>
+			<input type="number">
+		</p>
+		<!-- 单选 -->
+		<p >
+			男:<input type="radio" name="sex" value="man" checked>
+			女:<input type="radio" name="sex" value="woman">
+		</p>
+		<!-- 多选标签 -->
+		<p>
+			爱好:
+			<input type="checkbox" name="love" value="eat">吃饭
+			<input type="checkbox" name="love" value="sleep">睡觉
+			<input type="checkbox" name="love" value="bat">
+			打豆豆
+		</p>
+		<!-- 图片选择标签 -->
+		<p>
+			<input type="image" src="http://img4.imgtn.bdimg.com/it/u=1211809781,2652142631&fm=26&gp=0.jpg" value="图片按钮wa">
+		</p>
+		<!--下拉选择 -->
+		<p><select name="student" id="">
+				<option value="chuildren">小学</option>
+				<option value="primary">中学</option>
+				<option value="high">高中</option>
+				<option value="collage" selected="">大学</option>
+			</select></p>
+		<p>
+			<h3>简单介绍</h3>
+			<textarea name="area" id="" cols="30" rows="10">来呀,挥毫作画</textarea>
+		</p>
+	</form>
+</body>
+</html>

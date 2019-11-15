@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .fixTop {
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+            line-height: 100px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>12</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+    <li>1223123</li>
+</ul>
+<div class="fixTop">回到顶部</div>
+<script src="jquery.js"></script>
+<script>
+    $(function () {
+        $('.fixTop').click(function () {
+            // $('html,body').animate({
+            //     'scrollTop':0
+            // },200);
+
+            //  经测试,该方法也是可以的
+            // $('html,body').scrollTop(0);
+
+            // 这是点击触发按钮之后一秒执行操作
+            setTimeout(function () {
+               $('html,body').scrollTop(0);
+            },1000);
+            // $('.fixTop').css('color','white');
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>style</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #009ACD;
+        }
+    </style>
+</head>
+<body>
+    <div class="box " id="wrap"></div>
+    <script>
+        var oDiv = document.getElementById('wrap');
+        oDiv.onclick = function () {
+            console.log(oDiv.style);
+            oDiv.style.height = '200px';
+            oDiv.style.width = '200px';
+            oDiv.style.backgroundColor = 'red';
+        }
+	</script>
+</body>
+</html>

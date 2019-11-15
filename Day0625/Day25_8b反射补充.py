@@ -1,0 +1,5 @@
+# getattr()
+# hasattr()
+# setattr()
+# delattr()
+print('Day25')

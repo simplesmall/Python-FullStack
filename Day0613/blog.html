@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="referrer" content="origin"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>python之路——模块和包 - Eva_J - 博客园</title>
+    <meta property="og:description"
+          content="阅读目录 一 模块 3.1 import 3.2&#160;from ... import... 3.3&#160;把模块当做脚本执行 3.4 模块搜索路径 3.5&#160;编译python文件 二"/>
+    <link type="text/css" rel="stylesheet"
+          href="/bundles/blog-common.css?v=KOZafwuaDasEedEenI5aTy8aXH0epbm6VUJ0v3vsT_Q1"/>
+    <link id="MainCss" type="text/css" rel="stylesheet"
+          href="/skins/LoveIsIntheAir/bundle-LoveIsIntheAir.css?v=1a1njKMb9NXq0SiMQC1DxNR7neAOH_-_T7CqiC-KPw41"/>
+    <link type="text/css" rel="stylesheet" href="/blog/customcss/250832.css?v=sgnWqV5WAgR4lMmYSWvpJe19YwI%3d"/>
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet"
+          href="/skins/LoveIsIntheAir/bundle-LoveIsIntheAir-mobile.css?v=2vKssTQro2c1xn1VJpQlerpUCrPsZu0FDfkhm7xMpkY1"/>
+    <link title="RSS" type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/Eva-J/rss"/>
+    <link title="RSD" type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/Eva-J/rsd.xml"/>
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/Eva-J/wlwmanifest.xml"/>
+    <script src="//common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script>var currentBlogId = 250832;
+    var currentBlogApp = 'Eva-J', cb_enable_mathjax = false;
+    var isLogined = false;</script>
+    <script src="/bundles/blog-common.js?v=smtcUT5dhdu_5eEO8CKHYoVc7DPLgEBGzp6zKkstlzg1"
+            type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--PageBeginHtml Block Begin-->
+<h2 style="line-height: 1.5em; float: left; text-align: right; color: #816d65; position: absolute; top: 110px; left: 110px; background: #d2eef4">
+    程序媛</h2>
+<!--PageBeginHtml Block End-->
+
+<!--done-->
+<center>
+    <div id="home">
+        <div id="header">
+            <div id="blogTitle">
+                <a id="lnkBlogLogo" href="https://www.cnblogs.com/Eva-J/"><img id="blogLogo"
+                                                                               src="/Skins/LoveIsIntheAir/images/logo.gif"
+                                                                               alt=""/></a>
+
+                <!--done-->
+                <h1><a id="Header1_HeaderTitle" class="headermaintitle" href="https://www.cnblogs.com/Eva-J/">Eva_J</a>
+                </h1>
+                <h2></h2>
+
+
+            </div><!--end: blogTitle 博客的标题和副标题 -->
+            <div id="navigator">
+
+                <ul id="navList">
+                    <li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">博客园</a></li>
+                    <li><a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/Eva-J/">首页</a></li>
+                    <li><a id="blog_nav_newpost" class="menu" rel="nofollow"
+                           href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+                    <li><a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow"
+                           href="https://msg.cnblogs.com/send/Eva_J">联系</a></li>
+                    <li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+                    <li><a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/Eva-J/rss">订阅</a>
+                        <a id="blog_nav_rss_image" class="aHeaderXML" href="https://www.cnblogs.com/Eva-J/rss"><img
+                                src="//www.cnblogs.com/images/xml.gif" alt="订阅"/></a></li>
+                </ul>
+                <div class="blogStats">
+
+                    <div id="blog_stats">
+                        <!--done-->
+                        随笔- 33&nbsp;
+                        文章- 127&nbsp;
+                        评论- 279&nbsp;
+                    </div>
+
+                </div><!--end: blogStats -->
+            </div><!--end: navigator 博客导航栏 -->
+        </div><!--end: header 头部 -->
+
+        <div class="clear"></div>
+        <div id="topicList">
+
+            <div id="post_detail">
+                <!--done-->
+                <div id="topics">
+                    <div class="post">
+                        <h1 class="postTitle">
+                            <a id="cb_post_title_url" class="postTitle2"
+                               href="https://www.cnblogs.com/Eva-J/articles/7292109.html">python之路——模块和包</a>
+                        </h1>
+                        <div class="clear"></div>
+                        <div class="postBody">
+                            <div id="cnblogs_post_body" class="blogpost-body">
+                                <div class="post">
+                                    <div class="clear">&nbsp;</div>
+                                    <div class="postBody">
+                                        <div id="cnblogs_post_body"><a name="_labelTop"></a>
+                                            <div id="navCategory">
+                                                <p style="font-size: 25px;"><strong>阅读目录</strong></p>
+                                                <ul>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label1">一 模块</a></li>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label2">3.1 import</a></li>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label3">3.2&nbsp;from ... import...</a></li>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label4">3.3&nbsp;把模块当做脚本执行&nbsp;</a></li>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label5">3.4 模块搜索路径</a></li>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label6">3.5&nbsp;编译python文件</a></li>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label7">二 包</a></li>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label8">2.2 import&nbsp;</a></li>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label9">2.3 from ... import ...</a></li>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label10">2.4 __init__.py文件</a></li>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label11">2.5 &nbsp;from glance.api import *</a></li>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label12">2.6 绝对导入和相对导入</a></li>
+                                                    <li>
+                                                        <a style="color: darkseagreen; text-decoration: none; font-size: 18px;"
+                                                           href="#_label13">2.7 单独导入包</a></li>
+                                                </ul>
+                                            </div>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label1"></a></div>
+                                            <h1 style="background: #e9f7fa; padding: 5px; border-radius: 6px;">一 模块</h1>
+                                            <h2 style="text-align: center; background: #ddddff; padding: 5px; border-radius: 6px;">
+                                                <span><strong>1 什么是模块？</strong></span></h2>
+                                            <p>&nbsp; &nbsp;常见的场景：一个模块就是一个包含了python定义和声明的文件，文件名就是模块名字加上.py的后缀。</p>
+                                            <p>&nbsp; &nbsp;但其实import加载的模块分为四个通用类别：　</p>
+                                            <p>　　1 使用python编写的代码（.py文件）</p>
+                                            <p>　　2 已被编译为共享库或DLL的C或C++扩展</p>
+                                            <p>　　3 包好一组模块的包</p>
+                                            <p>　　4 使用C编写并链接到python解释器的内置模块</p>
+                                            <h2 style="text-align: center; background: #ddddff; padding: 5px; border-radius: 6px;">
+                                                <span><strong>2 为何要使用模块？</strong></span></h2>
+                                            <p>&nbsp; &nbsp;
+                                                如果你退出python解释器然后重新进入，那么你之前定义的函数或者变量都将丢失，因此我们通常将程序写到文件中以便永久保存下来，需要时就通过python
+                                                test.py方式去执行，此时test.py被称为脚本script。</p>
+                                            <p>&nbsp; &nbsp;
+                                                随着程序的发展，功能越来越多，为了方便管理，我们通常将程序分成一个个的文件，这样做程序的结构更清晰，方便管理。这时我们不仅仅可以把这些文件当做脚本去执行，还可以把他们当做模块来导入到其他的模块中，实现了功能的重复利用，</p>
+                                            <h2 style="text-align: center; background: #ddddff; padding: 5px; border-radius: 6px;">
+                                                <span><strong><span>3.如何使用模块？</span></strong></span></h2>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label2"></a></div>
+                                            <h3 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                3.1 import</h3>
+                                            <p>示例文件：自定义模块my_module.py，文件名my_module.py,模块名my_module</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('2211ccbd-61bd-4914-af6f-c448af3348b7')">
+                                                <img id="code_img_closed_2211ccbd-61bd-4914-af6f-c448af3348b7"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_2211ccbd-61bd-4914-af6f-c448af3348b7"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('2211ccbd-61bd-4914-af6f-c448af3348b7',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_2211ccbd-61bd-4914-af6f-c448af3348b7"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">my_module.py</span>
+<span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">from the my_module.py</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">)
+
+money</span>=1000
+
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> read1():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">my_module-&gt;read1-&gt;money</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">,money)
+
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> read2():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">my_module-&gt;read2 calling read1</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">)
+    read1()
+
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> change():
+    </span><span style="color: #0000ff;">global</span><span style="color: #000000;"> money
+    money</span>=0</pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">my_module模块</span></div>
+                                            <p>&nbsp;</p>
+                                            <h4 style="background: #009ACD; width: 50%; padding: 5px; border-radius: 6px;">
+                                                3.1.1</h4>
+                                            <p>
+                                                模块可以包含可执行的语句和函数的定义，这些语句的目的是初始化模块，它们只在模块名第一次遇到导入import语句时才执行（import语句是可以在程序中的任意位置使用的,且针对同一个模块很import多次,为了防止你重复导入，python的优化手段是：第一次导入后就将模块名加载到内存了，后续的import语句仅是对已经加载大内存中的模块对象增加了一次引用，不会重新执行模块内的语句），如下&nbsp;</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('58fb5395-8581-4b76-b9bd-b782ed7089e3')">
+                                                <img id="code_img_closed_58fb5395-8581-4b76-b9bd-b782ed7089e3"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_58fb5395-8581-4b76-b9bd-b782ed7089e3"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('58fb5395-8581-4b76-b9bd-b782ed7089e3',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_58fb5395-8581-4b76-b9bd-b782ed7089e3"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">demo.py</span>
+<span style="color: #0000ff;">import</span> my_module <span style="color: #008000;">#</span><span
+            style="color: #008000;">只在第一次导入时才执行my_module.py内代码,此处的显式效果是只打印一次'from the my_module.py',当然其他的顶级代码也都被执行了,只不过没有显示效果.</span>
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> my_module
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> my_module
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> my_module
+
+</span><span style="color: #800000;">'''</span><span style="color: #800000;">
+执行结果：
+from the my_module.py
+</span><span style="color: #800000;">'''</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">demo.py</span></div>
+                                            <p>&nbsp;</p>
+                                            <p>
+                                                我们可以从sys.modules中找到当前已经加载的模块，sys.modules是一个字典，内部包含模块名与模块对象的映射，该字典决定了导入模块时是否需要重新导入。</p>
+                                            <p>&nbsp;</p>
+                                            <h4 style="background: #009ACD; width: 50%; padding: 5px; border-radius: 6px;">
+                                                3.1.2&nbsp;</h4>
+                                            <p>
+                                                每个模块都是一个独立的名称空间，定义在这个模块中的函数，把这个模块的名称空间当做全局名称空间，这样我们在编写自己的模块时，就不用担心我们定义在自己模块中全局变量会在被导入时，与使用者的全局变量冲突</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('2a7bf0cb-3a6f-4696-928d-da57bd4d103d')">
+                                                <img id="code_img_closed_2a7bf0cb-3a6f-4696-928d-da57bd4d103d"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_2a7bf0cb-3a6f-4696-928d-da57bd4d103d"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('2a7bf0cb-3a6f-4696-928d-da57bd4d103d',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_2a7bf0cb-3a6f-4696-928d-da57bd4d103d"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">测试一:money与my_module.money不冲突</span><span
+        style="color: #008000;">
+#</span><span style="color: #008000;">demo.py</span>
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> my_module
+money</span>=10
+<span style="color: #0000ff;">print</span><span style="color: #000000;">(my_module.money)
+
+</span><span style="color: #800000;">'''</span><span style="color: #800000;">
+执行结果：
+from the my_module.py
+1000
+</span><span style="color: #800000;">'''</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">测试一:money与my_module.money不冲突</span>
+                                            </div>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('5cc314ac-9d80-4838-acbb-f0cb580eb5ab')">
+                                                <img id="code_img_closed_5cc314ac-9d80-4838-acbb-f0cb580eb5ab"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_5cc314ac-9d80-4838-acbb-f0cb580eb5ab"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('5cc314ac-9d80-4838-acbb-f0cb580eb5ab',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_5cc314ac-9d80-4838-acbb-f0cb580eb5ab"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">测试二：read1与my_module.read1不冲突</span><span
+        style="color: #008000;">
+#</span><span style="color: #008000;">demo.py</span>
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> my_module
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> read1():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">========</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+my_module.read1()
+
+</span><span style="color: #800000;">'''</span><span style="color: #800000;">
+执行结果:
+from the my_module.py
+my_module-&gt;read1-&gt;money 1000
+</span><span style="color: #800000;">'''</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">测试二：read1与my_module.read1不冲突</span>
+                                            </div>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('54c9712c-475f-45d0-80f1-90866bc7b1c2')">
+                                                <img id="code_img_closed_54c9712c-475f-45d0-80f1-90866bc7b1c2"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_54c9712c-475f-45d0-80f1-90866bc7b1c2"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('54c9712c-475f-45d0-80f1-90866bc7b1c2',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_54c9712c-475f-45d0-80f1-90866bc7b1c2"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">测试三：执行my_module.change()操作的全局变量money仍然是my_module中的</span><span
+        style="color: #008000;">
+#</span><span style="color: #008000;">demo.py</span>
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> my_module
+money</span>=1<span style="color: #000000;">
+my_module.change()
+</span><span style="color: #0000ff;">print</span><span style="color: #000000;">(money)
+
+</span><span style="color: #800000;">'''</span><span style="color: #800000;">
+执行结果：
+from the my_module.py
+1
+</span><span style="color: #800000;">'''</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">测试三：执行my_module.change()操作的全局变量money仍然是my_module中的</span>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <h4 style="background: #009ACD; width: 50%; padding: 5px; border-radius: 6px;">
+                                                3.1.3</h4>
+                                            <p>总结：首次导入模块my_module时会做三件事：</p>
+                                            <p><span style="color: #0000ff;">1.为源文件(my_module模块)创建新的名称空间，在my_module中定义的函数和方法若是使用到了global时访问的就是这个名称空间。</span>
+                                            </p>
+                                            <p><span style="color: #0000ff;">2.在新创建的命名空间中执行模块中包含的代码，见初始导入import&nbsp;my_module</span>
+                                            </p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #000000;">提示:导入模块时到底执行了什么？
+</span><span style="color: #008080;">2</span>
+<span style="color: #008080;">3</span> In fact function definitions are also &lsquo;statements&rsquo; that are &lsquo;executed&rsquo;; the execution of a module-level function definition enters the function name <span
+            style="color: #0000ff;">in</span> the module&rsquo;s <span style="color: #0000ff;">global</span><span
+            style="color: #000000;"> symbol table.
+</span><span
+            style="color: #008080;">4</span> 事实上函数定义也是&ldquo;被执行&rdquo;的语句，模块级别函数定义的执行将函数名放入模块全局名称空间表，用globals()可以查看</pre>
+                                            </div>
+                                            <p><span style="color: #0000ff;">3.创建名字my_module来引用该命名空间</span></p>
+                                            <div class="cnblogs_code">
+                                                <pre><span style="color: #008080;">1</span> 这个名字和变量名没什么区别，都是&lsquo;第一类的&rsquo;，且使用my_module.名字的方式可以访问my_module.py文件中定义的名字，my_module.名字与test.py中的名字来自两个完全不同的地方。</pre>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <h4 style="background: #009ACD; width: 50%; padding: 5px; border-radius: 6px;">
+                                                &nbsp;3.1.4</h4>
+                                            <p>为模块名起别名，相当于m1=1;m2=m1&nbsp;</p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #0000ff;">import</span><span style="color: #000000;"> my_module as sm
+</span><span style="color: #008080;">2</span> <span style="color: #0000ff;">print</span>(sm.money)</pre>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <p>示范用法一：</p>
+                                            <p>有两中sql模块mysql和oracle，根据用户的输入，选择不同的sql功能</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('4ec91d2b-5d78-4f0a-b014-e6b884357ed1')">
+                                                <img id="code_img_closed_4ec91d2b-5d78-4f0a-b014-e6b884357ed1"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_4ec91d2b-5d78-4f0a-b014-e6b884357ed1"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('4ec91d2b-5d78-4f0a-b014-e6b884357ed1',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_4ec91d2b-5d78-4f0a-b014-e6b884357ed1"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">mysql.py</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> sqlparse():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">from mysql sqlparse</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">)
+</span><span style="color: #008000;">#</span><span style="color: #008000;">oracle.py</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> sqlparse():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">from oracle sqlparse</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">)
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">test.py</span>
+db_type=input(<span style="color: #800000;">'</span><span style="color: #800000;">&gt;&gt;: </span><span
+            style="color: #800000;">'</span><span style="color: #000000;">)
+</span><span style="color: #0000ff;">if</span> db_type == <span style="color: #800000;">'</span><span
+            style="color: #800000;">mysql</span><span style="color: #800000;">'</span><span style="color: #000000;">:
+    </span><span style="color: #0000ff;">import</span><span style="color: #000000;"> mysql as db
+</span><span style="color: #0000ff;">elif</span> db_type == <span style="color: #800000;">'</span><span
+            style="color: #800000;">oracle</span><span style="color: #800000;">'</span><span style="color: #000000;">:
+    </span><span style="color: #0000ff;">import</span><span style="color: #000000;"> oracle as db
+
+db.sqlparse()
+复制代码</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">示例用法1</span></div>
+                                            <p>&nbsp;</p>
+                                            <p>示范用法二：&nbsp;</p>
+                                            <p>
+                                                为已经导入的模块起别名的方式对编写可扩展的代码很有用，假设有两个模块xmlreader.py和csvreader.py，它们都定义了函数read_data(filename):用来从文件中读取一些数据，但采用不同的输入格式。可以编写代码来选择性地挑选读取模块，例如</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('9eb19ee6-009e-4b06-8993-32725df736c1')">
+                                                <img id="code_img_closed_9eb19ee6-009e-4b06-8993-32725df736c1"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_9eb19ee6-009e-4b06-8993-32725df736c1"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('9eb19ee6-009e-4b06-8993-32725df736c1',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_9eb19ee6-009e-4b06-8993-32725df736c1"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">if</span> file_format == <span style="color: #800000;">'</span><span
+        style="color: #800000;">xml</span><span style="color: #800000;">'</span><span style="color: #000000;">:
+     </span><span style="color: #0000ff;">import</span><span style="color: #000000;"> xmlreader as reader
+</span><span style="color: #0000ff;">elif</span> file_format == <span style="color: #800000;">'</span><span
+        style="color: #800000;">csv</span><span style="color: #800000;">'</span><span style="color: #000000;">:
+     </span><span style="color: #0000ff;">import</span><span style="color: #000000;"> csvreader as reader
+data</span>=<span style="color: #000000;">reader.read_date(filename)
+ </span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">示例用法2</span></div>
+                                            <p>&nbsp;</p>
+                                            <p>&nbsp;</p>
+                                            <h4 style="background: #009ACD; width: 50%; padding: 5px; border-radius: 6px;">
+                                                3.1.5</h4>
+                                            <p>在一行导入多个模块</p>
+                                            <div class="cnblogs_code">
+                                                <pre><span style="color: #008080;">1</span> <span
+                                                        style="color: #0000ff;">import</span> sys,os,re</pre>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label3"></a></div>
+                                            <h3 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                <strong>3.2&nbsp;from ... import...</strong></h3>
+                                            <h4 style="background: #009ACD; width: 50%; padding: 5px; border-radius: 6px;">
+                                                3.2.1</h4>
+                                            <p>对比import
+                                                my_module，会将源文件的名称空间'my_module'带到当前名称空间中，使用时必须是my_module.名字的方式</p>
+                                            <p>而from
+                                                语句相当于import，也会创建新的名称空间，但是将my_module中的名字直接导入到当前的名称空间中，在当前名称空间中，直接使用名字就可以了、</p>
+                                            <div class="cnblogs_code">
+                                                <pre><span style="color: #008080;"> 1</span> <span
+                                                        style="color: #0000ff;">from</span> my_module <span
+                                                        style="color: #0000ff;">import</span> read1,read2<span
+                                                        style="color: #008080;"><br/></span></pre>
+                                            </div>
+                                            <p>这样在当前位置直接使用read1和read2就好了，执行时，仍然以my_module.py文件全局名称空间</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('55076f57-794f-4cd7-9ac3-9e213479e85e')">
+                                                <img id="code_img_closed_55076f57-794f-4cd7-9ac3-9e213479e85e"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_55076f57-794f-4cd7-9ac3-9e213479e85e"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('55076f57-794f-4cd7-9ac3-9e213479e85e',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_55076f57-794f-4cd7-9ac3-9e213479e85e"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #008000;">#</span><span
+        style="color: #008000;">测试一：导入的函数read1，执行时仍然回到my_module.py中寻找全局变量money</span><span style="color: #008000;">
+#</span><span style="color: #008000;">demo.py</span>
+<span style="color: #0000ff;">from</span> my_module <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> read1
+money</span>=1000<span style="color: #000000;">
+read1()
+</span><span style="color: #800000;">'''</span><span style="color: #800000;">
+执行结果:
+from the my_module.py
+spam-&gt;read1-&gt;money 1000
+</span><span style="color: #800000;">'''</span>
+
+<span style="color: #008000;">#</span><span style="color: #008000;">测试二:导入的函数read2，执行时需要调用read1(),仍然回到my_module.py中找read1()</span><span
+            style="color: #008000;">
+#</span><span style="color: #008000;">demo.py</span>
+<span style="color: #0000ff;">from</span> my_module <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> read2
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> read1():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">==========</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">)
+read2()
+
+</span><span style="color: #800000;">'''</span><span style="color: #800000;">
+执行结果:
+from the my_module.py
+my_module-&gt;read2 calling read1
+my_module-&gt;read1-&gt;money 1000
+</span><span style="color: #800000;">'''</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">View Code</span></div>
+                                            <p>&nbsp;</p>
+                                            <p>如果当前有重名read1或者read2，那么会有覆盖效果。</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('6853135e-fe4b-4ca7-8c96-c32c60053ada')">
+                                                <img id="code_img_closed_6853135e-fe4b-4ca7-8c96-c32c60053ada"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_6853135e-fe4b-4ca7-8c96-c32c60053ada"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('6853135e-fe4b-4ca7-8c96-c32c60053ada',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_6853135e-fe4b-4ca7-8c96-c32c60053ada"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">测试三:导入的函数read1，被当前位置定义的read1覆盖掉了</span><span
+        style="color: #008000;">
+#</span><span style="color: #008000;">demo.py</span>
+<span style="color: #0000ff;">from</span> my_module <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> read1
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> read1():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">==========</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">)
+read1()
+</span><span style="color: #800000;">'''</span><span style="color: #800000;">
+执行结果:
+from the my_module.py
+==========
+</span><span style="color: #800000;">'''</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">View Code</span></div>
+                                            <p>&nbsp;</p>
+                                            <p><span style="line-height: 1.5;">需要特别强调的一点是：python中的变量赋值不是一种存储操作，而只是一种绑定关系，如下：</span>
+                                            </p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('d55953c7-91af-4adc-8045-e897ba06bdf5')">
+                                                <img id="code_img_closed_d55953c7-91af-4adc-8045-e897ba06bdf5"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_d55953c7-91af-4adc-8045-e897ba06bdf5"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('d55953c7-91af-4adc-8045-e897ba06bdf5',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_d55953c7-91af-4adc-8045-e897ba06bdf5"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">from</span> my_module <span style="color: #0000ff;">import</span><span
+        style="color: #000000;"> money,read1
+money</span>=100 <span style="color: #008000;">#</span><span style="color: #008000;">将当前位置的名字money绑定到了100</span>
+<span style="color: #0000ff;">print</span>(money) <span style="color: #008000;">#</span><span style="color: #008000;">打印当前的名字</span>
+read1() <span style="color: #008000;">#</span><span style="color: #008000;">读取my_module.py中的名字money,仍然为1000</span>
+
+<span style="color: #800000;">'''</span><span style="color: #800000;">
+from the my_module.py
+100
+my_module-&gt;read1-&gt;money 1000
+</span><span style="color: #800000;">'''</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">View Code</span></div>
+                                            <p>&nbsp;</p>
+                                            <h4 style="background: #009ACD; width: 50%; padding: 5px; border-radius: 6px;">
+                                                <span style="line-height: 1.5;">3.2.2 </span></h4>
+                                            <p><span style="line-height: 1.5;">也支持as</span></p>
+                                            <div class="cnblogs_code">
+                                                <pre><span style="color: #008080;">1</span> <span
+                                                        style="color: #0000ff;">from</span> my_module <span
+                                                        style="color: #0000ff;">import</span> read1 as read</pre>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <h4 style="background: #009ACD; width: 50%; padding: 5px; border-radius: 6px;">
+                                                <span style="line-height: 1.5;">3.2.3 </span></h4>
+                                            <p><span style="line-height: 1.5;">也支持导入多行</span></p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #0000ff;">from</span> my_module <span
+        style="color: #0000ff;">import</span><span style="color: #000000;"> (read1,
+</span><span style="color: #008080;">2</span> <span style="color: #000000;">                  read2,
+</span><span style="color: #008080;">3</span>                   money)</pre>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <h4 style="background: #009ACD; width: 50%; padding: 5px; border-radius: 6px;">
+                                                <span style="line-height: 1.5;">3.2.4 </span></h4>
+                                            <p><span style="line-height: 1.5;">from my_module&nbsp;import * 把my_module中所有的不是以下划线(_)开头的名字都导入到当前位置，大部分情况下我们的python程序不应该使用这种导入方式，因为*你不知道你导入什么名字，很有可能会覆盖掉你之前已经定义的名字。而且可读性极其的差，在交互式环境中导入时没有问题。</span>
+                                            </p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('c2fb252c-dde2-438e-b59f-47b75be59e7f')">
+                                                <img id="code_img_closed_c2fb252c-dde2-438e-b59f-47b75be59e7f"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_c2fb252c-dde2-438e-b59f-47b75be59e7f"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('c2fb252c-dde2-438e-b59f-47b75be59e7f',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_c2fb252c-dde2-438e-b59f-47b75be59e7f"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">from</span> my_module <span style="color: #0000ff;">import</span> * <span
+        style="color: #008000;">#</span><span style="color: #008000;">将模块my_module中所有的名字都导入到当前名称空间</span>
+<span style="color: #0000ff;">print</span><span style="color: #000000;">(money)
+</span><span style="color: #0000ff;">print</span><span style="color: #000000;">(read1)
+</span><span style="color: #0000ff;">print</span><span style="color: #000000;">(read2)
+</span><span style="color: #0000ff;">print</span><span style="color: #000000;">(change)
+
+</span><span style="color: #800000;">'''</span><span style="color: #800000;">
+执行结果:
+from the my_module.py
+1000
+&lt;function read1 at 0x1012e8158&gt;
+&lt;function read2 at 0x1012e81e0&gt;
+&lt;function change at 0x1012e8268&gt;
+</span><span style="color: #800000;">'''</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">View Code</span></div>
+                                            <p>&nbsp;</p>
+                                            <p>在my_module.py中新增一行</p>
+                                            <div class="cnblogs_code">
+                                                <pre><span style="color: #800080;">__all__</span>=[<span
+                                                        style="color: #800000;">'</span><span style="color: #800000;">money</span><span
+                                                        style="color: #800000;">'</span>,<span
+                                                        style="color: #800000;">'</span><span style="color: #800000;">read1</span><span
+                                                        style="color: #800000;">'</span>] <span style="color: #008000;">#</span><span
+                                                        style="color: #008000;">这样在另外一个文件中用from my_module import *就这能导入列表中规定的两个名字</span></pre>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <p><em>*如果my_module.py中的名字前加_,即_money，则from my_module&nbsp;import
+                                                *,则_money不能被导入</em></p>
+                                            <h4>3.2.5 模块的循环引用问题</h4>
+                                            <p>思考：假如有两个模块a，b。我可不可以在a模块中import b ，再在b模块中import a？</p>
+                                            <h4 style="background: #009ACD; width: 50%; padding: 5px; border-radius: 6px;">
+                                                <span style="line-height: 1.5;">3.2.6 模块的加载与修改</span></h4>
+                                            <p>
+                                                考虑到性能的原因，每个模块只被导入一次,放入字典sys.modules中，如果你改变了模块的内容，你必须重启程序，python不支持重新加载或卸载之前导入的模块，</p>
+                                            <p>
+                                                有的同学可能会想到直接从sys.modules中删除一个模块不就可以卸载了吗，注意了，你删了sys.modules中的模块对象仍然可能被其他程序的组件所引用，因而不会被清除。</p>
+                                            <p>特别的对于我们引用了这个模块中的一个类，用这个类产生了很多对象，因而这些对象都有关于这个模块的引用。</p>
+                                            <p>如果只是你想交互测试的一个模块，使用 importlib.reload(), e.g. import importlib;
+                                                importlib.reload(modulename)，这只能用于测试环境。</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('3d3ff223-04f1-4395-814c-5c13698e809e')">
+                                                <img id="code_img_closed_3d3ff223-04f1-4395-814c-5c13698e809e"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_3d3ff223-04f1-4395-814c-5c13698e809e"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('3d3ff223-04f1-4395-814c-5c13698e809e',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_3d3ff223-04f1-4395-814c-5c13698e809e"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">def</span><span style="color: #000000;"> func1():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+        style="color: #800000;">func1</span><span style="color: #800000;">'</span>)</pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">aa.py</span></div>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('9ae5e970-a697-47a6-b6b1-16ccccc97fe2')">
+                                                <img id="code_img_closed_9ae5e970-a697-47a6-b6b1-16ccccc97fe2"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_9ae5e970-a697-47a6-b6b1-16ccccc97fe2"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('9ae5e970-a697-47a6-b6b1-16ccccc97fe2',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_9ae5e970-a697-47a6-b6b1-16ccccc97fe2"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">import</span><span style="color: #000000;"> time,importlib
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> aa
+
+time.sleep(</span>20<span style="color: #000000;">)
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> importlib.reload(aa)</span>
+aa.func1()</pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">测试代码</span></div>
+                                            <p>在20秒的等待时间里，修改aa.py中func1的内容，等待test.py的结果。</p>
+                                            <p>打开importlib注释，重新测试</p>
+                                            <p>&nbsp;</p>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label4"></a></div>
+                                            <h3 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                <strong>3.3&nbsp;把模块当做脚本执行</strong><span style="line-height: 1.5;">&nbsp;</span>
+                                            </h3>
+                                            <p>我们可以通过模块的全局变量__name__来查看模块名：<br/>当做脚本运行：<br/>__name__ 等于'__main__'</p>
+                                            <p>当做模块导入：<br/>__name__=&nbsp;<span
+                                                    style="font-family: 'Courier New'; font-size: 12px;">模块名</span></p>
+                                            <p>作用：用来控制.py文件在不同的应用场景下执行不同的逻辑<br/>if __name__ == '__main__':</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('5fc37bb0-463e-4fe0-abe2-1fa55b0ab45c')">
+                                                <img id="code_img_closed_5fc37bb0-463e-4fe0-abe2-1fa55b0ab45c"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_5fc37bb0-463e-4fe0-abe2-1fa55b0ab45c"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('5fc37bb0-463e-4fe0-abe2-1fa55b0ab45c',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_5fc37bb0-463e-4fe0-abe2-1fa55b0ab45c"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">def</span><span style="color: #000000;"> fib(n):
+    a, b </span>= 0, 1
+    <span style="color: #0000ff;">while</span> b &lt;<span style="color: #000000;"> n:
+        </span><span style="color: #0000ff;">print</span>(b, end=<span style="color: #800000;">'</span> <span
+            style="color: #800000;">'</span><span style="color: #000000;">)
+        a, b </span>= b, a+<span style="color: #000000;">b
+    </span><span style="color: #0000ff;">print</span><span style="color: #000000;">()
+
+</span><span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span
+            style="color: #800000;">"</span><span style="color: #800000;">__main__</span><span
+            style="color: #800000;">"</span><span style="color: #000000;">:
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800080;">__name__</span><span
+            style="color: #000000;">)
+    num </span>= input(<span style="color: #800000;">'</span><span style="color: #800000;">num :</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">)
+    fib(int(num))</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">View Code</span></div>
+                                            <p>&nbsp;</p>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label5"></a></div>
+                                            <h3 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                <span style="font-size: 14pt;"><strong>3.4 模块搜索路径</strong></span></h3>
+                                            <p>python解释器在启动时会自动加载一些模块，可以使用sys.modules查看</p>
+                                            <p>
+                                                在第一次导入某个模块时（比如my_module），会先检查该模块是否已经被加载到内存中（当前执行文件的名称空间对应的内存），如果有则直接引用</p>
+                                            <p>如果没有，解释器则会查找同名的内建模块，如果还没有找到就从sys.path给出的目录列表中依次寻找my_module.py文件。</p>
+                                            <p><span style="color: #ff0000; font-size: 16px;"><strong>所以总结模块的查找顺序是：内存中已经加载的模块-&gt;内置模块-&gt;sys.path路径中包含的模块</strong></span>
+                                            </p>
+                                            <p>sys.path的初始化的值来自于：</p>
+                                            <p>The directory containing the input script (or the current directory when
+                                                no file is specified).<br/>PYTHONPATH (a list of directory names, with
+                                                the same syntax as the shell variable PATH).<br/>The
+                                                installation-dependent default.</p>
+                                            <p><span style="color: #ff0000;">需要特别注意的是：我们自定义的模块名不应该与系统内置模块重名。虽然每次都说，但是仍然会有人不停的犯错。&nbsp;</span>
+                                            </p>
+                                            <p>在初始化后，python程序可以修改sys.path,路径放到前面的优先于标准库被加载。</p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> &gt;&gt;&gt; <span style="color: #0000ff;">import</span><span
+        style="color: #000000;"> sys
+</span><span style="color: #008080;">2</span> &gt;&gt;&gt; sys.path.append(<span style="color: #800000;">'</span><span
+        style="color: #800000;">/a/b/c/d</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+</span><span style="color: #008080;">3</span> &gt;&gt;&gt; sys.path.insert(0,<span style="color: #800000;">'</span><span
+        style="color: #800000;">/x/y/z</span><span style="color: #800000;">'</span>) <span
+        style="color: #008000;">#</span><span style="color: #008000;">排在前的目录，优先被搜索</span></pre>
+                                            </div>
+                                            <p>
+                                                注意：搜索时按照sys.path中从左到右的顺序查找，位于前的优先被查找，sys.path中还可能包含.zip归档文件和.egg文件，python会把.zip归档文件当成一个目录去处理。</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('da58e8f5-945f-49bb-a830-d2073b01736b')">
+                                                <img id="code_img_closed_da58e8f5-945f-49bb-a830-d2073b01736b"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_da58e8f5-945f-49bb-a830-d2073b01736b"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('da58e8f5-945f-49bb-a830-d2073b01736b',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_da58e8f5-945f-49bb-a830-d2073b01736b"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">首先制作归档文件：zip module.zip foo.py bar.py</span>
+
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> sys
+sys.path.append(</span><span style="color: #800000;">'</span><span style="color: #800000;">module.zip</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">)
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> foo,bar
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">也可以使用zip中目录结构的具体位置</span>
+sys.path.append(<span style="color: #800000;">'</span><span style="color: #800000;">module.zip/lib/python</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">)
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">windows下的路径不加r开头，会语法错误</span>
+sys.path.insert(0,r<span style="color: #800000;">'</span><span style="color: #800000;">C:\Users\Administrator\PycharmProjects\a</span><span
+            style="color: #800000;">'</span>)</pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">View Code</span></div>
+                                            <p>&nbsp;</p>
+                                            <p>
+                                                至于.egg文件是由setuptools创建的包，这是按照第三方python库和扩展时使用的一种常见格式，.egg文件实际上只是添加了额外元数据(如版本号，依赖项等)的.zip文件。</p>
+                                            <p>
+                                                需要强调的一点是：只能从.zip文件中导入.py，.pyc等文件。使用C编写的共享库和扩展块无法直接从.zip文件中加载（此时setuptools等打包系统有时能提供一种规避方法），且从.zip中加载文件不会创建.pyc或者.pyo文件，因此一定要事先创建他们，来避免加载模块是性能下降。</p>
+                                            <p>&nbsp;</p>
+                                            <p>官网解释</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('413c6554-7938-4f96-8eba-62ad076ab729')">
+                                                <img id="code_img_closed_413c6554-7938-4f96-8eba-62ad076ab729"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_413c6554-7938-4f96-8eba-62ad076ab729"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('413c6554-7938-4f96-8eba-62ad076ab729',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_413c6554-7938-4f96-8eba-62ad076ab729"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">官网链接：https://docs.python.org/3/tutorial/modules.html#the-module-search-path</span>
+<span style="color: #000000;">搜索路径：
+当一个命名为my_module的模块被导入时
+    解释器首先会从内建模块中寻找该名字
+    找不到，则去sys.path中找该名字
+
+sys.path从以下位置初始化
+执行文件所在的当前目录
+PTYHONPATH（包含一系列目录名，与shell变量PATH语法一样）
+依赖安装时默认指定的
+
+注意：在支持软连接的文件系统中，执行脚本所在的目录是在软连接之后被计算的，换句话说，包含软连接的目录不会被添加到模块的搜索路径中
+
+在初始化后，我们也可以在python程序中修改sys.path,执行文件所在的路径默认是sys.path的第一个目录，在所有标准库路径的前面。这意味着，当前目录是优先于标准库目录的，需要强调的是：我们自定义的模块名不要跟python标准库的模块名重复，除非你是故意的，傻叉。</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">View Code</span></div>
+                                            <p>&nbsp;</p>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label6"></a></div>
+                                            <h3 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                <span style="font-size: 14pt;"><strong>3.5&nbsp;编译python文件</strong></span>
+                                            </h3>
+                                            <p>
+                                                为了提高加载模块的速度，强调强调强调：提高的是加载速度而绝非运行速度。python解释器会在__pycache__目录中下缓存每个模块编译后的版本，格式为：module.version.pyc。通常会包含python的版本号。例如，在CPython3.3版本下，my_module.py模块会被缓存成__pycache__/my_module.cpython-33.pyc。这种命名规范保证了编译后的结果多版本共存。</p>
+                                            <p>&nbsp;</p>
+                                            <p>
+                                                Python检查源文件的修改时间与编译的版本进行对比，如果过期就需要重新编译。这是完全自动的过程。并且编译的模块是平台独立的，所以相同的库可以在不同的架构的系统之间共享，即pyc使一种跨平台的字节码，类似于JAVA火.NET,是由python虚拟机来执行的，但是pyc的内容跟python的版本相关，不同的版本编译后的pyc文件不同，2.5编译的pyc文件不能到3.5上执行，并且pyc文件是可以反编译的，因而它的出现仅仅是用来提升模块的加载速度的。</p>
+                                            <p>&nbsp;</p>
+                                            <p>python解释器在以下两种情况下不检测缓存<br/> 　　1
+                                                如果是在命令行中被直接导入模块，则按照这种方式，每次导入都会重新编译，并且不会存储编译后的结果（python3.3以前的版本应该是这样）</p>
+                                            <div class="cnblogs_code">
+                                                <pre>python -m my_module.py</pre>
+                                            </div>
+                                            <p>　　2
+                                                如果源文件不存在，那么缓存的结果也不会被使用，如果想在没有源文件的情况下来使用编译后的结果，则编译后的结果必须在源目录下&nbsp;</p>
+                                            <p>提示：</p>
+                                            <p>1.模块名区分大小写，foo.py与FOO.py代表的是两个模块</p>
+                                            <p>2.你可以使用-O或者-OO转换python命令来减少编译模块的大小</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('c535aaca-4341-40e5-a936-4ffbd4f17a9f')">
+                                                <img id="code_img_closed_c535aaca-4341-40e5-a936-4ffbd4f17a9f"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_c535aaca-4341-40e5-a936-4ffbd4f17a9f"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('c535aaca-4341-40e5-a936-4ffbd4f17a9f',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_c535aaca-4341-40e5-a936-4ffbd4f17a9f"
+                                                     class="cnblogs_code_hide">
+<pre>-<span style="color: #000000;">O转换会帮你去掉assert语句
+</span>-<span style="color: #000000;">OO转换会帮你去掉assert语句和__doc__文档字符串
+由于一些程序可能依赖于assert语句或文档字符串，你应该在在确认需要的情况下使用这些选项。</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">了解</span></div>
+                                            <p>3.在速度上从.pyc文件中读指令来执行不会比从.py文件中读指令执行更快，只有在模块被加载时，.pyc文件才是更快的</p>
+                                            <p>
+                                                4.只有使用import语句是才将文件自动编译为.pyc文件，在命令行或标准输入中指定运行脚本则不会生成这类文件，因而我们可以使用compieall模块为一个目录中的所有模块创建.pyc文件</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('a681d062-b9ff-44c9-b26e-0b0ff75dc665')">
+                                                <img id="code_img_closed_a681d062-b9ff-44c9-b26e-0b0ff75dc665"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_a681d062-b9ff-44c9-b26e-0b0ff75dc665"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('a681d062-b9ff-44c9-b26e-0b0ff75dc665',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_a681d062-b9ff-44c9-b26e-0b0ff75dc665"
+                                                     class="cnblogs_code_hide">
+<pre>模块可以作为一个脚本（使用python -<span style="color: #000000;">m compileall）编译Python源
+
+python </span>-m compileall /<span style="color: #000000;">module_directory 递归着编译
+如果使用python </span>-O -m compileall /module_directory -<span style="color: #000000;">l则只一层
+
+命令行里使用compile()函数时，自动使用python </span>-O -<span style="color: #000000;">m compileall
+
+详见：https:</span>//docs.python.org/3/library/compileall.html<span style="color: #008000;">#</span><span
+        style="color: #008000;">module-compileall</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">了解</span></div>
+                                            <p>&nbsp;</p>
+                                            <h3 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                <span style="font-size: 14pt;"><strong>补充:</strong><strong>dir()函数</strong></span>
+                                            </h3>
+                                            <p>内建函数dir是用来查找模块中定义的名字，返回一个有序字符串列表</p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #0000ff;">import</span><span style="color: #000000;"> my_module
+dir(my_module)</span></pre>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <p>如果没有参数,dir()列举出当前定义的名字</p>
+                                            <p><br/>dir()不会列举出内建函数或者变量的名字，它们都被定义到了标准模块builtin中，可以列举出它们，</p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #0000ff;">import</span><span style="color: #000000;"> builtins
+dir(builtins)</span></pre>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label7"></a></div>
+                                            <h1 style="background: #e9f7fa; padding: 5px; border-radius: 6px;">二 包</h1>
+                                            <p>包是一种通过使用&lsquo;.模块名&rsquo;来组织python模块名称空间的方式。</p>
+                                            <p><span style="color: #ff0000; font-size: 16px;"><strong>１. 无论是import形式还是from...import形式，凡是在导入语句中（而不是在使用时）遇到带点的，都要第一时间提高警觉：这是关于包才有的导入语法</strong></span>
+                                            </p>
+                                            <p><span style="color: #ff0000; font-size: 16px;"><strong>2. 包是目录级的（文件夹级），文件夹是用来组成py文件（包的本质就是一个包含__init__.py文件的目录）</strong></span>
+                                            </p>
+                                            <p><span style="color: #ff0000; font-size: 16px;"><strong>3. import导入文件时，产生名称空间中的名字来源于文件，import 包，产生的名称空间的名字同样来源于文件，即包下的__init__.py，导入包本质就是在导入该文件</strong></span>
+                                            </p>
+                                            <p><span
+                                                    style="color: #ff0000; font-size: 16px;"><strong>强调：</strong></span>
+                                            </p>
+                                            <p><span style="color: #ff0000; font-size: 16px;"><strong>　　1. 在python3中，即使包下没有__init__.py文件，import 包仍然不会报错，而在python2中，包下一定要有该文件，否则import 包报错</strong></span>
+                                            </p>
+                                            <p><span style="color: #ff0000; font-size: 16px;"><strong>　　2. 创建包的目的不是为了运行，而是被导入使用，记住，包只是模块的一种形式而已，包即模块</strong></span>
+                                            </p>
+                                            <p><br/><span
+                                                    style="font-size: 16px;">包A和包B下有同名模块也不会冲突，如A.a与B.a来自俩个命名空间</span>
+                                            </p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('67b550ac-6fb9-4747-8d85-c0a879b0fb0a')">
+                                                <img id="code_img_closed_67b550ac-6fb9-4747-8d85-c0a879b0fb0a"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_67b550ac-6fb9-4747-8d85-c0a879b0fb0a"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('67b550ac-6fb9-4747-8d85-c0a879b0fb0a',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_67b550ac-6fb9-4747-8d85-c0a879b0fb0a"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">import</span><span style="color: #000000;"> os
+os.makedirs(</span><span style="color: #800000;">'</span><span style="color: #800000;">glance/api</span><span
+        style="color: #800000;">'</span><span style="color: #000000;">)
+os.makedirs(</span><span style="color: #800000;">'</span><span style="color: #800000;">glance/cmd</span><span
+        style="color: #800000;">'</span><span style="color: #000000;">)
+os.makedirs(</span><span style="color: #800000;">'</span><span style="color: #800000;">glance/db</span><span
+        style="color: #800000;">'</span><span style="color: #000000;">)
+l </span>=<span style="color: #000000;"> []
+l.append(open(</span><span style="color: #800000;">'</span><span style="color: #800000;">glance/__init__.py</span><span
+        style="color: #800000;">'</span>,<span style="color: #800000;">'</span><span
+        style="color: #800000;">w</span><span style="color: #800000;">'</span><span style="color: #000000;">))
+l.append(open(</span><span style="color: #800000;">'</span><span
+        style="color: #800000;">glance/api/__init__.py</span><span style="color: #800000;">'</span>,<span
+        style="color: #800000;">'</span><span style="color: #800000;">w</span><span
+        style="color: #800000;">'</span><span style="color: #000000;">))
+l.append(open(</span><span style="color: #800000;">'</span><span
+        style="color: #800000;">glance/api/policy.py</span><span style="color: #800000;">'</span>,<span
+        style="color: #800000;">'</span><span style="color: #800000;">w</span><span
+        style="color: #800000;">'</span><span style="color: #000000;">))
+l.append(open(</span><span style="color: #800000;">'</span><span
+        style="color: #800000;">glance/api/versions.py</span><span style="color: #800000;">'</span>,<span
+        style="color: #800000;">'</span><span style="color: #800000;">w</span><span
+        style="color: #800000;">'</span><span style="color: #000000;">))
+l.append(open(</span><span style="color: #800000;">'</span><span
+        style="color: #800000;">glance/cmd/__init__.py</span><span style="color: #800000;">'</span>,<span
+        style="color: #800000;">'</span><span style="color: #800000;">w</span><span
+        style="color: #800000;">'</span><span style="color: #000000;">))
+l.append(open(</span><span style="color: #800000;">'</span><span
+        style="color: #800000;">glance/cmd/manage.py</span><span style="color: #800000;">'</span>,<span
+        style="color: #800000;">'</span><span style="color: #800000;">w</span><span
+        style="color: #800000;">'</span><span style="color: #000000;">))
+l.append(open(</span><span style="color: #800000;">'</span><span style="color: #800000;">glance/db/models.py</span><span
+        style="color: #800000;">'</span>,<span style="color: #800000;">'</span><span
+        style="color: #800000;">w</span><span style="color: #800000;">'</span><span style="color: #000000;">))
+map(</span><span style="color: #0000ff;">lambda</span> f:f.close() ,l)</pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">创建目录代码</span></div>
+                                            <p>&nbsp;</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('8fd4430e-4876-4c04-a304-36d5f6d0d4c5')">
+                                                <img id="code_img_closed_8fd4430e-4876-4c04-a304-36d5f6d0d4c5"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_8fd4430e-4876-4c04-a304-36d5f6d0d4c5"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('8fd4430e-4876-4c04-a304-36d5f6d0d4c5',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_8fd4430e-4876-4c04-a304-36d5f6d0d4c5"
+                                                     class="cnblogs_code_hide">
+<pre>glance/                   <span style="color: #008000;">#</span><span
+        style="color: #008000;">Top-level package</span>
+<span style="color: #000000;">
+├── </span><span style="color: #800080;">__init__</span>.py      <span style="color: #008000;">#</span><span
+            style="color: #008000;">Initialize the glance package</span>
+<span style="color: #000000;">
+├── api                  </span><span style="color: #008000;">#</span><span
+            style="color: #008000;">Subpackage for api</span>
+<span style="color: #000000;">
+│   ├── </span><span style="color: #800080;">__init__</span><span style="color: #000000;">.py
+
+│   ├── policy.py
+
+│   └── versions.py
+
+├── cmd                </span><span style="color: #008000;">#</span><span
+            style="color: #008000;">Subpackage for cmd</span>
+<span style="color: #000000;">
+│   ├── </span><span style="color: #800080;">__init__</span><span style="color: #000000;">.py
+
+│   └── manage.py
+
+└── db                  </span><span style="color: #008000;">#</span><span
+            style="color: #008000;">Subpackage for db</span>
+<span style="color: #000000;">
+    ├── </span><span style="color: #800080;">__init__</span><span style="color: #000000;">.py
+
+    └── models.py</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">目录结构</span></div>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('6fb4b10d-7ec2-4209-ba84-8dbf98f84fea')">
+                                                <img id="code_img_closed_6fb4b10d-7ec2-4209-ba84-8dbf98f84fea"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_6fb4b10d-7ec2-4209-ba84-8dbf98f84fea"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('6fb4b10d-7ec2-4209-ba84-8dbf98f84fea',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_6fb4b10d-7ec2-4209-ba84-8dbf98f84fea"
+                                                     class="cnblogs_code_hide">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">文件内容</span>
+
+<span style="color: #008000;">#</span><span style="color: #008000;">policy.py</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> get():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">from policy.py</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">)
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">versions.py</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> create_resource(conf):
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">from version.py: </span><span style="color: #800000;">'</span><span
+            style="color: #000000;">,conf)
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">manage.py</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> main():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">from manage.py</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">)
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">models.py</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> register_models(engine):
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">from models.py: </span><span style="color: #800000;">'</span>,engine)</pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">文件内容</span></div>
+                                            <p>&nbsp;</p>
+                                            <h3 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                <span style="font-size: 14pt;"><strong>2.1 注意事项</strong></span></h3>
+                                            <p><br/>1.关于包相关的导入语句也分为import和from ... import
+                                                ...两种，但是无论哪种，无论在什么位置，在导入时都必须遵循一个原则：<span
+                                                        style="font-size: 18pt; color: #ff0000;">凡是在导入时带点的，点的左边都必须是一个包</span>，否则非法。可以带有一连串的点，如item.subitem.subsubitem,但都必须遵循这个原则。
+                                            </p>
+                                            <p>2.对于导入后，在使用时就没有这种限制了，点的左边可以是包,模块，函数，类(它们都可以用点的方式调用自己的属性)。</p>
+                                            <p>3.对比import item 和from item import name的应用场景：<br/>如果我们想直接使用name那必须使用后者。
+                                            </p>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label8"></a></div>
+                                            <h2 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                <span style="font-size: 14pt;"><span style="line-height: 1.5;">2.2 import</span>&nbsp;</span>
+                                            </h2>
+                                            <p>我们在与包glance同级别的文件中测试</p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #0000ff;">import</span><span style="color: #000000;"> glance.db.models
+</span><span style="color: #008080;">2</span> glance.db.models.register_models(<span
+        style="color: #800000;">'</span><span style="color: #800000;">mysql</span><span style="color: #800000;">'</span>)<span
+        style="font-family: verdana, Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.5; background-color: #ffffff;">&nbsp;</span></pre>
+                                            </div>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label9"></a></div>
+                                            <h2 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                <span style="font-size: 14pt;"><span style="line-height: 1.5;">2.3 from ... import ...</span></span>
+                                            </h2>
+                                            <p><span style="font-size: 16px; color: #ff0000;"><strong><span
+                                                    style="line-height: 1.5;">需要注意的是from后import导入的模块，必须是明确的一个不能带点，否则会有语法错误，如：from a import b.c是错误语法</span></strong></span>
+                                            </p>
+                                            <p>我们在与包glance同级别的文件中测试&nbsp;</p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #0000ff;">from</span> glance.db <span
+        style="color: #0000ff;">import</span><span style="color: #000000;"> models
+</span><span style="color: #008080;">2</span> models.register_models(<span style="color: #800000;">'</span><span
+        style="color: #800000;">mysql</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+</span><span style="color: #008080;">3</span>
+<span style="color: #008080;">4</span> <span style="color: #0000ff;">from</span> glance.db.models <span
+            style="color: #0000ff;">import</span><span style="color: #000000;"> register_models
+</span><span style="color: #008080;">5</span> register_models(<span style="color: #800000;">'</span><span
+            style="color: #800000;">mysql</span><span style="color: #800000;">'</span>)</pre>
+                                            </div>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label10"></a></div>
+                                            <h2 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                <span style="font-size: 14pt;">2.4 __init__.py文件</span></h2>
+                                            <p>
+                                                不管是哪种方式，只要是第一次导入包或者是包的任何其他部分，都会依次执行包下的__init__.py文件(我们可以在每个包的文件内都打印一行内容来验证一下)，这个文件可以为空，但是也可以存放一些初始化包的代码。</p>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label11"></a></div>
+                                            <h2 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                <span style="font-size: 14pt;">2.5 &nbsp;from glance.api import *</span>
+                                            </h2>
+                                            <p>在讲模块时，我们已经讨论过了从一个模块内导入所有*，此处我们研究从一个包导入所有*。</p>
+                                            <p>
+                                                此处是想从包api中导入所有，实际上该语句只会导入包api下__init__.py文件中定义的名字，我们可以在这个文件中定义__all___:</p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">在__init__.py中定义</span>
+x=10
+
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> func():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">from api.__init.py</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">)
+
+</span><span style="color: #800080;">__all__</span>=[<span style="color: #800000;">'</span><span
+            style="color: #800000;">x</span><span style="color: #800000;">'</span>,<span
+            style="color: #800000;">'</span><span style="color: #800000;">func</span><span
+            style="color: #800000;">'</span>,<span style="color: #800000;">'</span><span
+            style="color: #800000;">policy</span><span style="color: #800000;">'</span>]</pre>
+                                            </div>
+                                            <p>&nbsp;此时我们在于glance同级的文件中执行from glance.api import
+                                                *就导入__all__中的内容（versions仍然不能导入）。</p>
+                                            <p>&nbsp;</p>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('38db44f3-934c-489f-bb3e-23335d989683')">
+                                                <img id="code_img_closed_38db44f3-934c-489f-bb3e-23335d989683"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_38db44f3-934c-489f-bb3e-23335d989683"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('38db44f3-934c-489f-bb3e-23335d989683',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_38db44f3-934c-489f-bb3e-23335d989683"
+                                                     class="cnblogs_code_hide">
+<pre>glance/<span style="color: #000000;">
+
+├── </span><span style="color: #800080;">__init__</span><span style="color: #000000;">.py
+
+├── api
+
+│   ├── </span><span style="color: #800080;">__init__</span>.py   <span style="color: #800080;">__all__</span> = [<span
+        style="color: #800000;">'</span><span style="color: #800000;">policy</span><span
+        style="color: #800000;">'</span>,<span style="color: #800000;">'</span><span
+        style="color: #800000;">versions</span><span style="color: #800000;">'</span><span style="color: #000000;">]
+
+│   ├── policy.py
+
+│   └── versions.py
+
+├── cmd               </span><span style="color: #800080;">__all__</span> = [<span style="color: #800000;">'</span><span
+        style="color: #800000;">manage</span><span style="color: #800000;">'</span><span style="color: #000000;">]
+
+│   ├── </span><span style="color: #800080;">__init__</span><span style="color: #000000;">.py
+
+│   └── manage.py
+
+└── db                </span><span style="color: #800080;">__all__</span> = [<span style="color: #800000;">'</span><span
+        style="color: #800000;">models</span><span style="color: #800000;">'</span><span style="color: #000000;">]
+
+    ├── </span><span style="color: #800080;">__init__</span><span style="color: #000000;">.py
+
+    └── models.py
+
+</span><span style="color: #800000;">
+
+from glance.api import *
+policy.get()</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">from glance.api import *</span>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label12"></a></div>
+                                            <h2 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                <span style="font-size: 14pt;">2.6 绝对导入和相对导入</span></h2>
+                                            <p>我们的最顶级包glance是写给别人用的，然后在glance包内部也会有彼此之间互相导入的需求，这时候就有绝对导入和相对导入两种方式：</p>
+                                            <p>绝对导入：以glance作为起始</p>
+                                            <p>相对导入：用.或者..的方式最为起始（只能在一个包中使用，不能用于不同目录内）</p>
+                                            <p>例如：我们在glance/api/version.py中想要导入glance/cmd/manage.py</p>
+                                            <div class="cnblogs_code">
+<pre>在glance/api/<span style="color: #000000;">version.py
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">绝对导入</span>
+<span style="color: #0000ff;">from</span> glance.cmd <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> manage
+manage.main()
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">相对导入</span>
+<span style="color: #0000ff;">from</span> ..cmd <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> manage
+manage.main()</span></pre>
+                                            </div>
+                                            <p>测试结果：注意一定要在于glance同级的文件中测试</p>
+                                            <div class="cnblogs_code">
+                                                <pre><span style="color: #008080;">1</span> <span
+                                                        style="color: #0000ff;">from</span> glance.api <span
+                                                        style="color: #0000ff;">import</span> versions&nbsp;</pre>
+                                            </div>
+                                            <p>
+                                                注意：在使用pycharm时，有的情况会为你多做一些事情，这是软件相关的东西，会影响你对模块导入的理解，因而在测试时，一定要回到命令行去执行，模拟我们生产环境，你总不能拿着pycharm去上线代码吧！！！</p>
+                                            <p>&nbsp;</p>
+                                            <p><span style="color: #ff0000; font-size: 16px;"><strong>特别需要注意的是：可以用import导入内置或者第三方模块（已经在sys.path中），但是要绝对避免使用import来导入自定义包的子模块(没有在sys.path中)，应该使用from... import ...的绝对或者相对导入,且包的相对导入只能用from的形式。</strong></span>
+                                            </p>
+                                            <p>
+                                                比如我们想在glance/api/versions.py中导入glance/api/policy.py，有的同学一抽这俩模块是在同一个目录下，十分开心的就去做了，它直接这么做</p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #008000;">#</span><span style="color: #008000;">在version.py中</span>
+<span style="color: #008080;">2</span>
+<span style="color: #008080;">3</span> <span style="color: #0000ff;">import</span><span style="color: #000000;"> policy
+</span><span style="color: #008080;">4</span> policy.get()</pre>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <p>
+                                                没错，我们单独运行version.py是一点问题没有的，运行version.py的路径搜索就是从当前路径开始的，于是在导入policy时能在当前目录下找到</p>
+                                            <p>
+                                                但是你想啊，你子包中的模块version.py极有可能是被一个glance包同一级别的其他文件导入，比如我们在于glance同级下的一个test.py文件中导入version.py，如下</p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #0000ff;">from</span> glance.api <span style="color: #0000ff;">import</span><span
+        style="color: #000000;"> versions
+
+</span><span style="color: #800000;">'''</span><span style="color: #800000;">
+执行结果:
+ImportError: No module named 'policy'
+</span><span style="color: #800000;">'''</span>
+
+<span style="color: #800000;">'''</span><span style="color: #800000;">
+分析:
+此时我们导入versions在versions.py中执行
+import policy需要找从sys.path也就是从当前目录找policy.py,
+这必然是找不到的
+</span><span style="color: #800000;">'''</span></pre>
+                                            </div>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('9ae01a51-18f7-4a68-920f-f50cf41cda8e')">
+                                                <img id="code_img_closed_9ae01a51-18f7-4a68-920f-f50cf41cda8e"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_9ae01a51-18f7-4a68-920f-f50cf41cda8e"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('9ae01a51-18f7-4a68-920f-f50cf41cda8e',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_9ae01a51-18f7-4a68-920f-f50cf41cda8e"
+                                                     class="cnblogs_code_hide">
+<pre>glance/<span style="color: #000000;">
+
+├── </span><span style="color: #800080;">__init__</span>.py      <span style="color: #0000ff;">from</span> glance <span
+        style="color: #0000ff;">import</span><span style="color: #000000;"> api
+                             </span><span style="color: #0000ff;">from</span> glance <span style="color: #0000ff;">import</span><span
+        style="color: #000000;"> cmd
+                             </span><span style="color: #0000ff;">from</span> glance <span style="color: #0000ff;">import</span><span
+        style="color: #000000;"> db
+
+├── api
+
+│   ├── </span><span style="color: #800080;">__init__</span>.py  <span
+        style="color: #0000ff;">from</span> glance.api <span style="color: #0000ff;">import</span><span
+        style="color: #000000;"> policy
+                              </span><span style="color: #0000ff;">from</span> glance.api <span style="color: #0000ff;">import</span><span
+        style="color: #000000;"> versions
+
+│   ├── policy.py
+
+│   └── versions.py
+
+├── cmd                 </span><span style="color: #0000ff;">from</span> glance.cmd <span
+        style="color: #0000ff;">import</span><span style="color: #000000;"> manage
+
+│   ├── </span><span style="color: #800080;">__init__</span><span style="color: #000000;">.py
+
+│   └── manage.py
+
+└── db                   </span><span style="color: #0000ff;">from</span> glance.db <span
+        style="color: #0000ff;">import</span><span style="color: #000000;"> models
+
+    ├── </span><span style="color: #800080;">__init__</span><span style="color: #000000;">.py
+
+    └── models.py</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">绝对导入</span></div>
+                                            <div class="cnblogs_code"
+                                                 onclick="cnblogs_code_show('1818263c-10bc-4fab-8b8f-2774813e492c')">
+                                                <img id="code_img_closed_1818263c-10bc-4fab-8b8f-2774813e492c"
+                                                     class="code_img_closed"
+                                                     src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                     alt=""/><img
+                                                    id="code_img_opened_1818263c-10bc-4fab-8b8f-2774813e492c"
+                                                    class="code_img_opened" style="display: none;"
+                                                    onclick="cnblogs_code_hide('1818263c-10bc-4fab-8b8f-2774813e492c',event)"
+                                                    src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                    alt=""/>
+                                                <div id="cnblogs_code_open_1818263c-10bc-4fab-8b8f-2774813e492c"
+                                                     class="cnblogs_code_hide">
+<pre>glance/<span style="color: #000000;">
+
+├── </span><span style="color: #800080;">__init__</span>.py      <span style="color: #0000ff;">from</span> . <span
+        style="color: #0000ff;">import</span> api  <span style="color: #008000;">#</span><span style="color: #008000;">.表示当前目录</span>
+                     <span style="color: #0000ff;">from</span> . <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> cmd
+                     </span><span style="color: #0000ff;">from</span> . <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> db
+
+├── api
+
+│   ├── </span><span style="color: #800080;">__init__</span>.py  <span style="color: #0000ff;">from</span> . <span
+            style="color: #0000ff;">import</span><span style="color: #000000;"> policy
+                     </span><span style="color: #0000ff;">from</span> . <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> versions
+
+│   ├── policy.py
+
+│   └── versions.py
+
+├── cmd              </span><span style="color: #0000ff;">from</span> . <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> manage
+
+│   ├── </span><span style="color: #800080;">__init__</span><span style="color: #000000;">.py
+
+│   └── manage.py    </span><span style="color: #0000ff;">from</span> ..api <span
+            style="color: #0000ff;">import</span><span style="color: #000000;"> policy
+                     </span><span style="color: #008000;">#</span><span style="color: #008000;">..表示上一级目录，想再manage中使用policy中的方法就需要回到上一级glance目录往下找api包，从api导入policy</span>
+<span style="color: #000000;">
+└── db               </span><span style="color: #0000ff;">from</span> . <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> models
+
+    ├── </span><span style="color: #800080;">__init__</span><span style="color: #000000;">.py
+
+    └── models.py</span></pre>
+                                                </div>
+                                                <span class="cnblogs_code_collapse">相对导入</span></div>
+                                            <p>&nbsp;</p>
+                                            <div style="text-align: right;"><a href="#_labelTop">回到顶部</a><a
+                                                    name="_label13"></a></div>
+                                            <h2 style="background: #4efbe3; padding: 5px; width: 70%; border-radius: 6px;">
+                                                <span style="font-size: 14pt;"><span
+                                                        style="line-height: 1.5;">2.7 单独导入包</span></span></h2>
+                                            <p><span style="line-height: 1.5;">单独导入包名称时不会导入包中所有包含的所有子模块，如</span></p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">在与glance同级的test.py中</span>
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> glance
+glance.cmd.manage.main()
+
+</span><span style="color: #800000;">'''</span><span style="color: #800000;">
+执行结果：
+AttributeError: module 'glance' has no attribute 'cmd'
+
+</span><span style="color: #800000;">'''</span></pre>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <p>解决方法：</p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #008000;">#</span><span style="color: #008000;">glance/__init__.py</span>
+<span style="color: #008080;">2</span> <span style="color: #0000ff;">from</span> . <span
+            style="color: #0000ff;">import</span><span style="color: #000000;"> cmd
+</span><span style="color: #008080;">3</span>
+<span style="color: #008080;">4</span> <span style="color: #008000;">#</span><span style="color: #008000;">glance/cmd/__init__.py</span>
+<span style="color: #008080;">5</span> <span style="color: #0000ff;">from</span> . <span
+            style="color: #0000ff;">import</span> manage</pre>
+                                            </div>
+                                            <p>执行：</p>
+                                            <div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #008000;">#</span><span style="color: #008000;">在于glance同级的test.py中</span>
+<span style="color: #008080;">2</span> <span style="color: #0000ff;">import</span><span style="color: #000000;"> glance
+</span><span style="color: #008080;">3</span> glance.cmd.manage.main()</pre>
+                                            </div>
+                                            <p>千万别问：__all__不能解决吗，__all__是用于控制from...import *&nbsp;</p>
+                                        </div>
+                                        <h4>import glance之后直接调用模块中的方法</h4>
+                                        <div class="cnblogs_code"
+                                             onclick="cnblogs_code_show('00dfee67-36be-4a81-a817-091458f4356a')"><img
+                                                id="code_img_closed_00dfee67-36be-4a81-a817-091458f4356a"
+                                                class="code_img_closed"
+                                                src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                alt=""/><img id="code_img_opened_00dfee67-36be-4a81-a817-091458f4356a"
+                                                             class="code_img_opened" style="display: none;"
+                                                             onclick="cnblogs_code_hide('00dfee67-36be-4a81-a817-091458f4356a',event)"
+                                                             src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                             alt=""/>
+                                            <div id="cnblogs_code_open_00dfee67-36be-4a81-a817-091458f4356a"
+                                                 class="cnblogs_code_hide">
+<pre>glance/<span style="color: #000000;">
+
+├── </span><span style="color: #800080;">__init__</span>.py     <span style="color: #0000ff;">from</span> .api <span
+        style="color: #0000ff;">import</span> *
+                    <span style="color: #0000ff;">from</span> .cmd <span style="color: #0000ff;">import</span> *
+                    <span style="color: #0000ff;">from</span> .db <span style="color: #0000ff;">import</span> *<span
+            style="color: #000000;">
+├── api
+
+│   ├── </span><span style="color: #800080;">__init__</span>.py   <span style="color: #800080;">__all__</span> = [<span
+            style="color: #800000;">'</span><span style="color: #800000;">policy</span><span
+            style="color: #800000;">'</span>,<span style="color: #800000;">'</span><span style="color: #800000;">versions</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">]
+
+│   ├── policy.py
+
+│   └── versions.py
+
+├── cmd               </span><span style="color: #800080;">__all__</span> = [<span style="color: #800000;">'</span><span
+            style="color: #800000;">manage</span><span style="color: #800000;">'</span><span style="color: #000000;">]
+
+│   ├── </span><span style="color: #800080;">__init__</span><span style="color: #000000;">.py
+
+│   └── manage.py
+
+└── db                </span><span style="color: #800080;">__all__</span> = [<span style="color: #800000;">'</span><span
+            style="color: #800000;">models</span><span style="color: #800000;">'</span><span style="color: #000000;">]
+
+    ├── </span><span style="color: #800080;">__init__</span><span style="color: #000000;">.py
+
+    └── models.py
+
+
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> glance
+policy.get()</span></pre>
+                                            </div>
+                                            <span class="cnblogs_code_collapse">import glance</span></div>
+                                        <h1 style="background: #e9f7fa; padding: 5px; border-radius: 6px;">软件开发规范</h1>
+                                        <p>
+                                            <img src="https://images2017.cnblogs.com/blog/827651/201708/827651-20170809105059949-1199069919.png"
+                                                 alt=""/></p>
+                                        <div class="cnblogs_code"
+                                             onclick="cnblogs_code_show('f04b6d74-bec0-466f-b0f1-74f6ea4db7e0')"><img
+                                                id="code_img_closed_f04b6d74-bec0-466f-b0f1-74f6ea4db7e0"
+                                                class="code_img_closed"
+                                                src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif"
+                                                alt=""/><img id="code_img_opened_f04b6d74-bec0-466f-b0f1-74f6ea4db7e0"
+                                                             class="code_img_opened" style="display: none;"
+                                                             onclick="cnblogs_code_hide('f04b6d74-bec0-466f-b0f1-74f6ea4db7e0',event)"
+                                                             src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"
+                                                             alt=""/>
+                                            <div id="cnblogs_code_open_f04b6d74-bec0-466f-b0f1-74f6ea4db7e0"
+                                                 class="cnblogs_code_hide">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">=============&gt;bin目录：存放执行脚本</span><span
+        style="color: #008000;">
+#</span><span style="color: #008000;">start.py</span>
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> sys,os
+
+BASE_DIR</span>=os.path.dirname(os.path.dirname(os.path.abspath(<span style="color: #800080;">__file__</span><span
+            style="color: #000000;">)))
+sys.path.append(BASE_DIR)
+
+</span><span style="color: #0000ff;">from</span> core <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> core
+</span><span style="color: #0000ff;">from</span> conf <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> my_log_settings
+
+</span><span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span
+            style="color: #800000;">'</span><span style="color: #800000;">__main__</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">:
+    my_log_settings.load_my_logging_cfg()
+    core.run()
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">=============&gt;conf目录：存放配置文件</span><span
+            style="color: #008000;">
+#</span><span style="color: #008000;">config.ini</span>
+<span style="color: #000000;">[DEFAULT]
+user_timeout </span>= 1000<span style="color: #000000;">
+
+[egon]
+password </span>= 123<span style="color: #000000;">
+money </span>= 10000000<span style="color: #000000;">
+
+[alex]
+password </span>=<span style="color: #000000;"> alex3714
+money</span>=10000000000<span style="color: #000000;">
+
+[yuanhao]
+password </span>=<span style="color: #000000;"> ysb123
+money</span>=10
+
+<span style="color: #008000;">#</span><span style="color: #008000;">settings.py</span>
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> os
+config_path</span>=r<span style="color: #800000;">'</span><span style="color: #800000;">%s\%s</span><span
+            style="color: #800000;">'</span> %(os.path.dirname(os.path.abspath(<span
+            style="color: #800080;">__file__</span>)),<span style="color: #800000;">'</span><span
+            style="color: #800000;">config.ini</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">)
+user_timeout</span>=10<span style="color: #000000;">
+user_db_path</span>=r<span style="color: #800000;">'</span><span style="color: #800000;">%s\%s</span><span
+            style="color: #800000;">'</span> %(os.path.dirname(os.path.dirname(os.path.abspath(<span
+            style="color: #800080;">__file__</span><span style="color: #000000;">))),\
+                     </span><span style="color: #800000;">'</span><span style="color: #800000;">db</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">)
+
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">my_log_settings.py</span>
+<span style="color: #800000;">"""</span><span style="color: #800000;">
+logging配置
+</span><span style="color: #800000;">"""</span>
+
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> os
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> logging.config
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 定义三种日志输出格式 开始</span>
+<span style="color: #000000;">
+standard_format </span>= <span style="color: #800000;">'</span><span style="color: #800000;">[%(asctime)s][%(threadName)s:%(thread)d][task_id:%(name)s][%(filename)s:%(lineno)d]</span><span
+            style="color: #800000;">'</span><span style="color: #000000;"> \
+                  </span><span style="color: #800000;">'</span><span style="color: #800000;">[%(levelname)s][%(message)s]</span><span
+            style="color: #800000;">'</span> <span style="color: #008000;">#</span><span style="color: #008000;">其中name为getlogger指定的名字</span>
+<span style="color: #000000;">
+simple_format </span>= <span style="color: #800000;">'</span><span style="color: #800000;">[%(levelname)s][%(asctime)s][%(filename)s:%(lineno)d]%(message)s</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">
+
+id_simple_format </span>= <span style="color: #800000;">'</span><span style="color: #800000;">[%(levelname)s][%(asctime)s] %(message)s</span><span
+            style="color: #800000;">'</span>
+
+<span style="color: #008000;">#</span><span style="color: #008000;"> 定义日志输出格式 结束</span>
+<span style="color: #000000;">
+logfile_dir </span>= r<span style="color: #800000;">'</span><span style="color: #800000;">%s\log</span><span
+            style="color: #800000;">'</span> %os.path.dirname(os.path.dirname(os.path.abspath(<span
+            style="color: #800080;">__file__</span>)))  <span style="color: #008000;">#</span><span
+            style="color: #008000;"> log文件的目录</span>
+<span style="color: #000000;">
+logfile_name </span>= <span style="color: #800000;">'</span><span style="color: #800000;">all2.log</span><span
+            style="color: #800000;">'</span>  <span style="color: #008000;">#</span><span style="color: #008000;"> log文件名</span>
+
+<span style="color: #008000;">#</span><span style="color: #008000;"> 如果不存在定义的日志目录就创建一个</span>
+<span style="color: #0000ff;">if</span> <span style="color: #0000ff;">not</span><span style="color: #000000;"> os.path.isdir(logfile_dir):
+    os.mkdir(logfile_dir)
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> log文件的全路径</span>
+logfile_path =<span style="color: #000000;"> os.path.join(logfile_dir, logfile_name)
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> log配置字典</span>
+LOGGING_DIC =<span style="color: #000000;"> {
+    </span><span style="color: #800000;">'</span><span style="color: #800000;">version</span><span
+            style="color: #800000;">'</span>: 1<span style="color: #000000;">,
+    </span><span style="color: #800000;">'</span><span style="color: #800000;">disable_existing_loggers</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">: False,
+    </span><span style="color: #800000;">'</span><span style="color: #800000;">formatters</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">: {
+        </span><span style="color: #800000;">'</span><span style="color: #800000;">standard</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">: {
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">format</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">: standard_format
+        },
+        </span><span style="color: #800000;">'</span><span style="color: #800000;">simple</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">: {
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">format</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">: simple_format
+        },
+    },
+    </span><span style="color: #800000;">'</span><span style="color: #800000;">filters</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">: {},
+    </span><span style="color: #800000;">'</span><span style="color: #800000;">handlers</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">: {
+        </span><span style="color: #008000;">#</span><span style="color: #008000;">打印到终端的日志</span>
+        <span style="color: #800000;">'</span><span style="color: #800000;">console</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">: {
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">level</span><span
+            style="color: #800000;">'</span>: <span style="color: #800000;">'</span><span
+            style="color: #800000;">DEBUG</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">class</span><span
+            style="color: #800000;">'</span>: <span style="color: #800000;">'</span><span style="color: #800000;">logging.StreamHandler</span><span
+            style="color: #800000;">'</span>,  <span style="color: #008000;">#</span><span style="color: #008000;"> 打印到屏幕</span>
+            <span style="color: #800000;">'</span><span style="color: #800000;">formatter</span><span
+            style="color: #800000;">'</span>: <span style="color: #800000;">'</span><span
+            style="color: #800000;">simple</span><span style="color: #800000;">'</span><span style="color: #000000;">
+        },
+        </span><span style="color: #008000;">#</span><span style="color: #008000;">打印到文件的日志,收集info及以上的日志</span>
+        <span style="color: #800000;">'</span><span style="color: #800000;">default</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">: {
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">level</span><span
+            style="color: #800000;">'</span>: <span style="color: #800000;">'</span><span
+            style="color: #800000;">DEBUG</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">class</span><span
+            style="color: #800000;">'</span>: <span style="color: #800000;">'</span><span style="color: #800000;">logging.handlers.RotatingFileHandler</span><span
+            style="color: #800000;">'</span>,  <span style="color: #008000;">#</span><span style="color: #008000;"> 保存到文件</span>
+            <span style="color: #800000;">'</span><span style="color: #800000;">formatter</span><span
+            style="color: #800000;">'</span>: <span style="color: #800000;">'</span><span style="color: #800000;">standard</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">,
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">filename</span><span
+            style="color: #800000;">'</span>: logfile_path,  <span style="color: #008000;">#</span><span
+            style="color: #008000;"> 日志文件</span>
+            <span style="color: #800000;">'</span><span style="color: #800000;">maxBytes</span><span
+            style="color: #800000;">'</span>: 1024*1024*5,  <span style="color: #008000;">#</span><span
+            style="color: #008000;"> 日志大小 5M</span>
+            <span style="color: #800000;">'</span><span style="color: #800000;">backupCount</span><span
+            style="color: #800000;">'</span>: 5<span style="color: #000000;">,
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">encoding</span><span
+            style="color: #800000;">'</span>: <span style="color: #800000;">'</span><span
+            style="color: #800000;">utf-8</span><span style="color: #800000;">'</span>,  <span
+            style="color: #008000;">#</span><span style="color: #008000;"> 日志文件的编码，再也不用担心中文log乱码了</span>
+<span style="color: #000000;">        },
+    },
+    </span><span style="color: #800000;">'</span><span style="color: #800000;">loggers</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">: {
+        </span><span style="color: #008000;">#</span><span style="color: #008000;">logging.getLogger(__name__)拿到的logger配置</span>
+        <span style="color: #800000;">''</span><span style="color: #000000;">: {
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">handlers</span><span
+            style="color: #800000;">'</span>: [<span style="color: #800000;">'</span><span style="color: #800000;">default</span><span
+            style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">console</span><span
+            style="color: #800000;">'</span>],  <span style="color: #008000;">#</span><span style="color: #008000;"> 这里把上面定义的两个handler都加上，即log数据既写入文件又打印到屏幕</span>
+            <span style="color: #800000;">'</span><span style="color: #800000;">level</span><span
+            style="color: #800000;">'</span>: <span style="color: #800000;">'</span><span
+            style="color: #800000;">DEBUG</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">propagate</span><span
+            style="color: #800000;">'</span>: True,  <span style="color: #008000;">#</span><span
+            style="color: #008000;"> 向上（更高level的logger）传递</span>
+<span style="color: #000000;">        },
+    },
+}
+
+
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> load_my_logging_cfg():
+    logging.config.dictConfig(LOGGING_DIC)  </span><span style="color: #008000;">#</span><span style="color: #008000;"> 导入上面定义的logging配置</span>
+    logger = logging.getLogger(<span style="color: #800080;">__name__</span>)  <span
+            style="color: #008000;">#</span><span style="color: #008000;"> 生成一个log实例</span>
+    logger.info(<span style="color: #800000;">'</span><span style="color: #800000;">It works!</span><span
+            style="color: #800000;">'</span>)  <span style="color: #008000;">#</span><span style="color: #008000;"> 记录该文件的运行状态</span>
+
+<span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span
+            style="color: #800000;">'</span><span style="color: #800000;">__main__</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">:
+    load_my_logging_cfg()
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">=============&gt;core目录：存放核心逻辑</span><span
+            style="color: #008000;">
+#</span><span style="color: #008000;">core.py</span>
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> logging
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> time
+</span><span style="color: #0000ff;">from</span> conf <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> settings
+</span><span style="color: #0000ff;">from</span> lib <span style="color: #0000ff;">import</span><span
+            style="color: #000000;"> read_ini
+
+config</span>=<span style="color: #000000;">read_ini.read(settings.config_path)
+logger</span>=logging.getLogger(<span style="color: #800080;">__name__</span><span style="color: #000000;">)
+
+current_user</span>={<span style="color: #800000;">'</span><span style="color: #800000;">user</span><span
+            style="color: #800000;">'</span>:None,<span style="color: #800000;">'</span><span style="color: #800000;">login_time</span><span
+            style="color: #800000;">'</span>:None,<span style="color: #800000;">'</span><span style="color: #800000;">timeout</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">:int(settings.user_timeout)}
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> auth(func):
+    </span><span style="color: #0000ff;">def</span> wrapper(*args,**<span style="color: #000000;">kwargs):
+        </span><span style="color: #0000ff;">if</span> current_user[<span style="color: #800000;">'</span><span
+            style="color: #800000;">user</span><span style="color: #800000;">'</span><span style="color: #000000;">]:
+            interval</span>=time.time()-current_user[<span style="color: #800000;">'</span><span
+            style="color: #800000;">login_time</span><span style="color: #800000;">'</span><span
+            style="color: #000000;">]
+            </span><span style="color: #0000ff;">if</span> interval &lt; current_user[<span
+            style="color: #800000;">'</span><span style="color: #800000;">timeout</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">]:
+                </span><span style="color: #0000ff;">return</span> func(*args,**<span style="color: #000000;">kwargs)
+        name </span>= input(<span style="color: #800000;">'</span><span
+            style="color: #800000;">name&gt;&gt;: </span><span style="color: #800000;">'</span><span
+            style="color: #000000;">)
+        password </span>= input(<span style="color: #800000;">'</span><span
+            style="color: #800000;">password&gt;&gt;: </span><span style="color: #800000;">'</span><span
+            style="color: #000000;">)
+        </span><span style="color: #0000ff;">if</span><span style="color: #000000;"> config.has_section(name):
+            </span><span style="color: #0000ff;">if</span> password == config.get(name,<span
+            style="color: #800000;">'</span><span style="color: #800000;">password</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">):
+                logger.info(</span><span style="color: #800000;">'</span><span style="color: #800000;">登录成功</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">)
+                current_user[</span><span style="color: #800000;">'</span><span style="color: #800000;">user</span><span
+            style="color: #800000;">'</span>]=<span style="color: #000000;">name
+                current_user[</span><span style="color: #800000;">'</span><span
+            style="color: #800000;">login_time</span><span style="color: #800000;">'</span>]=<span
+            style="color: #000000;">time.time()
+                </span><span style="color: #0000ff;">return</span> func(*args,**<span style="color: #000000;">kwargs)
+        </span><span style="color: #0000ff;">else</span><span style="color: #000000;">:
+            logger.error(</span><span style="color: #800000;">'</span><span style="color: #800000;">用户名不存在</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">)
+
+    </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> wrapper
+
+@auth
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> buy():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span
+            style="color: #800000;">buy...</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+
+@auth
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> run():
+
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'''</span><span
+            style="color: #800000;">
+购物
+查看余额
+转账
+    </span><span style="color: #800000;">'''</span><span style="color: #000000;">)
+    </span><span style="color: #0000ff;">while</span><span style="color: #000000;"> True:
+        choice </span>= input(<span style="color: #800000;">'</span><span style="color: #800000;">&gt;&gt;: </span><span
+            style="color: #800000;">'</span><span style="color: #000000;">).strip()
+        </span><span style="color: #0000ff;">if</span> <span style="color: #0000ff;">not</span> choice:<span
+            style="color: #0000ff;">continue</span>
+        <span style="color: #0000ff;">if</span> choice == <span style="color: #800000;">'</span><span
+            style="color: #800000;">1</span><span style="color: #800000;">'</span><span style="color: #000000;">:
+            buy()
+
+
+
+</span><span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span
+            style="color: #800000;">'</span><span style="color: #800000;">__main__</span><span
+            style="color: #800000;">'</span><span style="color: #000000;">:
+    run()
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">=============&gt;db目录：存放数据库文件</span><span
+            style="color: #008000;">
+#</span><span style="color: #008000;">alex_json</span><span style="color: #008000;">
+#</span><span style="color: #008000;">egon_json</span>
+
+<span style="color: #008000;">#</span><span style="color: #008000;">=============&gt;lib目录：存放自定义的模块与包</span><span
+            style="color: #008000;">
+#</span><span style="color: #008000;">read_ini.py</span>
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> configparser
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> read(config_file):
+    config</span>=<span style="color: #000000;">configparser.ConfigParser()
+    config.read(config_file)
+    </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> config
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;">=============&gt;log目录：存放日志</span><span
+            style="color: #008000;">
+#</span><span style="color: #008000;">all2.log</span>
+[2017-07-29 00:31:40,272][MainThread:11692][task_id:conf.my_log_settings][my_log_settings.py:75<span
+            style="color: #000000;">][INFO][It works!]
+[</span>2017-07-29 00:31:41,789][MainThread:11692][task_id:core.core][core.py:25<span style="color: #000000;">][ERROR][用户名不存在]
+[</span>2017-07-29 00:31:46,394][MainThread:12348][task_id:conf.my_log_settings][my_log_settings.py:75<span
+            style="color: #000000;">][INFO][It works!]
+[</span>2017-07-29 00:31:47,629][MainThread:12348][task_id:core.core][core.py:25<span style="color: #000000;">][ERROR][用户名不存在]
+[</span>2017-07-29 00:31:57,912][MainThread:10528][task_id:conf.my_log_settings][my_log_settings.py:75<span
+            style="color: #000000;">][INFO][It works!]
+[</span>2017-07-29 00:32:03,340][MainThread:12744][task_id:conf.my_log_settings][my_log_settings.py:75<span
+            style="color: #000000;">][INFO][It works!]
+[</span>2017-07-29 00:32:05,065][MainThread:12916][task_id:conf.my_log_settings][my_log_settings.py:75<span
+            style="color: #000000;">][INFO][It works!]
+[</span>2017-07-29 00:32:08,181][MainThread:12916][task_id:core.core][core.py:25<span style="color: #000000;">][ERROR][用户名不存在]
+[</span>2017-07-29 00:32:13,638][MainThread:7220][task_id:conf.my_log_settings][my_log_settings.py:75<span
+            style="color: #000000;">][INFO][It works!]
+[</span>2017-07-29 00:32:23,005][MainThread:7220][task_id:core.core][core.py:20<span style="color: #000000;">][INFO][登录成功]
+[</span>2017-07-29 00:32:40,941][MainThread:7220][task_id:core.core][core.py:20<span style="color: #000000;">][INFO][登录成功]
+[</span>2017-07-29 00:32:47,222][MainThread:7220][task_id:core.core][core.py:20<span style="color: #000000;">][INFO][登录成功]
+[</span>2017-07-29 00:32:51,949][MainThread:7220][task_id:core.core][core.py:25<span style="color: #000000;">][ERROR][用户名不存在]
+[</span>2017-07-29 00:33:00,213][MainThread:7220][task_id:core.core][core.py:20<span style="color: #000000;">][INFO][登录成功]
+[</span>2017-07-29 00:33:50,118][MainThread:8500][task_id:conf.my_log_settings][my_log_settings.py:75<span
+            style="color: #000000;">][INFO][It works!]
+[</span>2017-07-29 00:33:55,845][MainThread:8500][task_id:core.core][core.py:20<span style="color: #000000;">][INFO][登录成功]
+[</span>2017-07-29 00:34:06,837][MainThread:8500][task_id:core.core][core.py:25<span style="color: #000000;">][ERROR][用户名不存在]
+[</span>2017-07-29 00:34:09,405][MainThread:8500][task_id:core.core][core.py:25<span style="color: #000000;">][ERROR][用户名不存在]
+[</span>2017-07-29 00:34:10,645][MainThread:8500][task_id:core.core][core.py:25][ERROR][用户名不存在]</pre>
+                                            </div>
+                                            <span class="cnblogs_code_collapse">View Code</span></div>
+                                        <p>&nbsp;</p>
+                                        <p>&nbsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="MySignature"></div>
+                            <div class="clear"></div>
+                            <div id="blog_post_info_block">
+                                <div id="BlogPostCategory"></div>
+                                <div id="EntryTag"></div>
+                                <div id="blog_post_info">
+                                </div>
+                                <div class="clear"></div>
+                                <div id="post_next_prev"></div>
+                            </div>
+
+
+                        </div>
+                        <div class="postDesc">posted @ <span id="post-date">2017-08-06 00:51</span> <a
+                                href='https://www.cnblogs.com/Eva-J/'>Eva_J</a> 阅读(<span id="post_view_count">...</span>)
+                            评论(<span id="post_comment_count">...</span>) &nbsp;<a
+                                    href="https://i.cnblogs.com/EditArticles.aspx?postid=7292109" rel="nofollow">编辑</a>
+                            <a href="#" onclick="AddToWz(7292109);return false;">收藏</a></div>
+                    </div>
+                    <script type="text/javascript">var allowComments = true, cb_blogId = 250832, cb_entryId = 7292109,
+                        cb_blogApp = currentBlogApp, cb_blogUserGuid = '4997edaa-857b-e511-9fc1-ac853d9f53cc',
+                        cb_entryCreatedDate = '2017/8/6 0:51:00';
+                    loadViewCount(cb_entryId);
+                    var cb_postType = 2;
+                    var isMarkdown = false;</script>
+
+                </div><!--end: topics 文章、评论容器-->
+            </div>
+            <a name="!comments"></a>
+            <div id="blog-comments-placeholder"></div>
+            <script type="text/javascript">var commentManager = new blogCommentManager();
+            commentManager.renderComments(0);</script>
+            <div id='comment_form' class='commentform'>
+                <a name='commentform'></a>
+                <div id='divCommentShow'></div>
+                <div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);'
+                                                                             onclick='return RefreshCommentList();'
+                                                                             id='lnk_RefreshComments' runat='server'
+                                                                             clientidmode='Static'>刷新评论</a><a href='#'
+                                                                                                              onclick='return RefreshPage();'>刷新页面</a><a
+                        href='#top'>返回顶部</a></div>
+                <div id='comment_form_container'></div>
+                <div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+                <div id='ad_t2'></div>
+                <div id='opt_under_post'></div>
+                <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+                <script>
+                    var googletag = googletag || {};
+                    googletag.cmd = googletag.cmd || [];
+                </script>
+                <script>
+                    googletag.cmd.push(function () {
+                        googletag.defineSlot('/1090369/C1', [300, 250], 'div-gpt-ad-1546353474406-0').addService(googletag.pubads());
+                        googletag.defineSlot('/1090369/C2', [468, 60], 'div-gpt-ad-1539008685004-0').addService(googletag.pubads());
+                        googletag.pubads().enableSingleRequest();
+                        googletag.enableServices();
+                    });
+                </script>
+                <div id='cnblogs_c1' class='c_ad_block'>
+                    <div id='div-gpt-ad-1546353474406-0' style='height:250px; width:300px;'></div>
+                </div>
+                <div id='under_post_news'></div>
+                <div id='cnblogs_c2' class='c_ad_block'>
+                    <div id='div-gpt-ad-1539008685004-0' style='height:60px; width:468px;'></div>
+                </div>
+                <div id='under_post_kb'></div>
+                <div id='HistoryToday' class='c_ad_block'></div>
+                <script type='text/javascript'>
+                    if (enablePostBottom()) {
+                        codeHighlight();
+                        fixPostBody();
+                        setTimeout(function () {
+                            incrementViewCount(cb_entryId);
+                        }, 50);
+                        deliverT2();
+                        deliverC1();
+                        deliverC2();
+                        loadNewsAndKb();
+                        loadBlogSignature();
+                        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+                        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+                        loadOptUnderPost();
+                        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+                    }
+                </script>
+            </div>
+
+
+        </div><!--end: topicList 文章列表容器-->
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+
+                <!--done-->
+                <div class="newsItem">
+                    <h3 class="catListTitle">公告</h3>
+                    <div id="blog-news"></div>
+                    <script type="text/javascript">loadBlogNews();</script>
+                </div>
+
+                <div id="calendar">
+                    <div id="blog-calendar" style="display:none"></div>
+                    <script type="text/javascript">loadBlogDefaultCalendar();</script>
+                </div>
+
+                <DIV id="leftcontentcontainer">
+                    <div id="blog-sidecolumn"></div>
+                    <script type="text/javascript">loadBlogSideColumn();</script>
+                </DIV>
+
+            </div><!--end: sideBarMain -->
+            <div class="clear"></div>
+            <div id="footer">
+
+                <!--done-->
+                Copyright &copy;2019 Eva_J
+            </div><!--end: footer -->
+        </div><!--end: sideBar 侧边栏容器 -->
+    </div><!--end: home 自定义的最大容器 -->
+</center>
+
+</body>
+</html>

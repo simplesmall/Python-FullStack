@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<button id="btn">上一页</button>
+<script>
+    alert(1);
+    document.getElementById('btn').onclick = function () {
+        // history.go(-1);
+        //刷新
+        // history.go(0);
+        //尽量不用,可以用于测试,因为是全局刷新
+        window.location.reload();
+    }
+</script>
+</body>
+</html>
